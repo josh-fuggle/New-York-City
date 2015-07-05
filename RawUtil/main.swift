@@ -15,7 +15,7 @@ func letsGo(options: Options) {
     if let suggestions = results.suggestions where results.valid == false {
         println("Invalid command-line arguments:")
         for suggestion in suggestions {
-            println("\t• \(suggestion)")
+            println("\t🔫 \(suggestion)")
         }
         return
     }

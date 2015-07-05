@@ -29,7 +29,7 @@ class ImageRenamer: ImageProcessor {
     
     func processURL(URL from: NSURL, dryRun: Bool) {
         
-        println("BEGIN -> Process image at URL: \(from)")
+        println("🏁 Process image at URL for renaming: \(from)")
         
         if let source = CGImageSourceCreateWithURL(from, nil) {
             
@@ -46,11 +46,11 @@ class ImageRenamer: ImageProcessor {
                     fm.moveItemAtURL(from, toURL: to, error: &error)
                 }
                 
-                println("SUCCESS -> Moved image to path: \(to)")
+                println("✅ Moved image to path: \(to)")
             }
             
         } else {
-            println("FAILED -> Could not load image at URL.")
+            println("❌ Could not load image at URL.")
         }
     }
     

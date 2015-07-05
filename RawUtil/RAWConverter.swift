@@ -15,9 +15,9 @@ func CGImageWriteToURL(image: CGImageRef, URL: NSURL, metadata: CGImageMetadataR
     CGImageDestinationAddImageAndMetadata(destination, image, metadata, nil)
     
     if (CGImageDestinationFinalize(destination)) {
-        println("SUCCESS -> Saved image to URL: \(URL)")
+        println("✅ Saved image to URL: \(URL)")
     } else {
-        println("FAILED -> Could not save image to URL: \(URL)")
+        println("❌ Could not save image to URL: \(URL)")
     }
 }
 
@@ -40,7 +40,7 @@ class RAWConverter: ImageProcessor {
     }
     
     func processURL(URL from: NSURL, dryRun: Bool) {
-        println("BEGIN -> Process image at URL: \(from)")
+        println("🏁 Process image at URL for conversion: \(from)")
         
         if let source = CGImageSourceCreateWithURL(from, nil) {
             
@@ -66,7 +66,7 @@ class RAWConverter: ImageProcessor {
                             fm.createDirectoryAtURL(RAWDirectory, withIntermediateDirectories: true, attributes: nil, error: &error)
                         }
                         
-                        println("SUCCESS -> Moved original to directory: \(originalDestination)")
+                        println("✅ Moved original to directory: \(originalDestination)")
                         
                         var newDestination = JPEGDirectory.URLByAppendingPathComponent(name.stringByDeletingPathExtension)
                         newDestination = newDestination.URLByAppendingPathExtension("JPG")
@@ -75,15 +75,15 @@ class RAWConverter: ImageProcessor {
                             CGImageWriteToURL(imageRef, newDestination, imageMetadata)
                         }
                         
-                        println("SUCCESS -> Exported compressed copy to directory: \(newDestination)")
+                        println("✅ Exported compressed copy to directory: \(newDestination)")
                         
                     } else {
-                        println("SKIP -> Image is not of a supported RAW format: \(from)")
+                        println("❌ Image is not of a supported RAW format: \(from)")
                     }
             }
             
         } else {
-            println("FAILED -> Could not load image at URL: \(from)")
+            println("❌ Could not load image at URL: \(from)")
         }
     }
 }

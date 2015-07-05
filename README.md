@@ -1,7 +1,7 @@
 __Disneyland__ is a set of image processing tools that I have created to help me improve my photo management workflow.
 Why __Disneyland__? Well, this is a set of tools for photographers. So I named the tool after the most photographed place on Earth, according to Instagram.
 
-What tools does it contain? Just two so far:
+What tools does this repo contain? Just two so far:
 
 1. `rename`: Rename allows you to batch rename your image files in to the format of ALBUM_YYYYMMDD_HHMMSS_MANUFACTURER.
 
@@ -18,8 +18,8 @@ Example
 
 Reasoning
 > I like to shoot firstly in RAW, and convert later. RAW files are large and it takes my computer a 
-> long time to render a preview of the file. If I were to upload RAW to a service such as Flickr or
-> Google Photos then I would quickly reach the quota limits of the services.
+> long time to render previews of these files. If I were to upload RAWs to services such as Flickr or
+> Google Photos then I would quickly reach the quota limits of these services.
 > All the GUI tools that I have used to perform this task either cost money or fall over when I batch
 > process a reasonably large number of files.
 > Convert will crawl through a directory for you, and convert all the RAWs it finds in to JPGs so that you

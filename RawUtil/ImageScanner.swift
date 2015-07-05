@@ -45,8 +45,11 @@ class ImageScanner {
                 
                 node.getResourceValue(&isDirectory, forKey: NSURLIsDirectoryKey, error: &error)
                 
+                println("🏁 About to check if file can be processed: \(node)")
+                
                 if let isDirectory = isDirectory as? Bool where isDirectory == true {
                     directoryURLs.append(node)
+                    println("✅ File can be processed as a directory.")
                     
                 } else {
                     
@@ -59,6 +62,9 @@ class ImageScanner {
                         
                         if isImage {
                             imageURLs.append(node)
+                            println("✅ File can be processed as an image.")
+                        } else {
+                            println("❌ File extension is not compatible: \(fileExt)")
                         }
                     }
                 }

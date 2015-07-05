@@ -56,7 +56,20 @@ class ImageRenamer: ImageProcessor {
     
     func calcImageName(imageSource: CGImageSourceRef) -> String {
         
+        func formatSystemDate(dateTaken: String) -> String {
+            let inFormatter = NSDateFormatter()
+            inFormatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
+            let date = inFormatter.dateFromString(dateTaken)
+            
+            let outFormatter = NSDateFormatter()
+            outFormatter.dateFormat = "yyyyMMdd_HHmmss"
+            let formattedDateTaken = outFormatter.stringFromDate(date!)
+            
+            return formattedDateTaken
+        }
+        
         // Assemble all the name components
+        var dateExtracted = false
         var nameComponents = NSMutableArray()
         nameComponents.addObject(baseImageName)
         
@@ -71,16 +84,10 @@ class ImageRenamer: ImageProcessor {
             if dateTakenPointer != nil {
                 let dateTakenUnsafe = unsafeBitCast(dateTakenPointer, CFStringRef.self)
                 let dateTaken = dateTakenUnsafe as! String
-                
-                let inFormatter = NSDateFormatter()
-                inFormatter.dateFormat = "yyyy:MM:dd HH:mm:ss"
-                let date = inFormatter.dateFromString(dateTaken)
-                
-                let outFormatter = NSDateFormatter()
-                outFormatter.dateFormat = "yyyyMMdd_HHmmss"
-                let formattedDateTaken = outFormatter.stringFromDate(date!)
-                nameComponents.addObject(formattedDateTaken)
+                nameComponents.addObject(formatSystemDate(dateTaken))
+                dateExtracted = true
             }
+            
         }
         
         
@@ -90,6 +97,16 @@ class ImageRenamer: ImageProcessor {
         if tiffPropertiesPointer != nil {
             let tiffPropertiesUnsafe = unsafeBitCast(tiffPropertiesPointer, CFDictionaryRef.self)
             
+            if dateExtracted == false {
+                let dateTimePointer = CFDictionaryGetValue(tiffPropertiesUnsafe, unsafeAddressOf(kCGImagePropertyTIFFDateTime))
+                if dateTimePointer != nil {
+                    let dateTimeUnsafe = unsafeBitCast(dateTimePointer, CFStringRef.self)
+                    let dateTime = dateTimeUnsafe as! String
+                    nameComponents.addObject(formatSystemDate(dateTime))
+                    dateExtracted = true
+                }
+            }
+            
             let makePointer = CFDictionaryGetValue(tiffPropertiesUnsafe, unsafeAddressOf(kCGImagePropertyTIFFModel))
             if makePointer != nil {
                 let unsafeMake = unsafeBitCast(makePointer, CFStringRef.self)
@@ -97,6 +114,10 @@ class ImageRenamer: ImageProcessor {
                 var makeComponents = makeString.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: " +,.-_"))
                 nameComponents.addObject(makeComponents.first!)
             }
+        }
+        
+        if dateExtracted == false {
+            println("❌ Unable to extract creation date.")
         }
         
         // Build the new name

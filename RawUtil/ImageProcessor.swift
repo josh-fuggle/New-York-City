@@ -9,6 +9,6 @@
 import Foundation
 
 protocol ImageProcessor {
-    func processURLs(URLs: [NSURL]?)
-    func processURL(URL from: NSURL)
+    func processURLs(URLs: [NSURL]?, dryRun: Bool)
+    func processURL(URL from: NSURL, dryRun: Bool)
 }

@@ -19,15 +19,15 @@ class ImageRenamer: ImageProcessor {
         self.fm = fm
     }
     
-    func processURLs(URLs: [NSURL]?) {
+    func processURLs(URLs: [NSURL]?, dryRun: Bool) {
         if let URLs = URLs {
             for URL in URLs {
-                processURL(URL: URL)
+                processURL(URL: URL, dryRun: dryRun)
             }
         }
     }
     
-    func processURL(URL from: NSURL) {
+    func processURL(URL from: NSURL, dryRun: Bool) {
         
         println("BEGIN -> Process image at URL: \(from)")
         
@@ -41,12 +41,16 @@ class ImageRenamer: ImageProcessor {
                 var to = baseURL.URLByAppendingPathComponent(calcImageName(source))
                 to = to.URLByAppendingPathExtension(originalExtension)
                 
-                var error: NSError?
-                fm.moveItemAtURL(from, toURL: to, error: &error)
+                if !dryRun {
+                    var error: NSError?
+                    fm.moveItemAtURL(from, toURL: to, error: &error)
+                }
+                
+                println("SUCCESS -> Moved image to path: \(to)")
             }
             
         } else {
-            println("FAILED -> Could not load image at URL: \(from)")
+            println("FAILED -> Could not load image at URL.")
         }
     }
     

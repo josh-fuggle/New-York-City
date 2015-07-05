@@ -8,36 +8,40 @@
 
 import Foundation
 
-//var arguments = Process.arguments
-//
-//if count(arguments) > 0 {
-//    let baseImageName = "Events" //arguments[1]
-//    let path = "/Volumes/Papaya/Photos/Events" //NSFileManager.defaultManager().currentDirectoryPath // "/Users/jf/Desktop/Processable"
-//
-//    if let rootURL = NSURL(fileURLWithPath: path) {
-//        processDirectory(rootURL, fileManager: NSFileManager.defaultManager(), baseImageName)
-//    }
-//    
-//} else {
-//    println("You need to provide a base image name.")
-//}
+func letsGo(options: Options) {
 
-func letsGo() {
+    // Validate the the user passed in correct arguements.
+    let results = options.validate()
+    if let suggestions = results.suggestions where results.valid == false {
+        println("Invalid command-line arguments:")
+        for suggestion in suggestions {
+            println("\t• \(suggestion)")
+        }
+        return
+    }
+    
+    // Let's begin
+    if let path = options.basePath, let baseURL = NSURL(fileURLWithPath: path) {
+        
+        let fm = NSFileManager.defaultManager()
 
-    let fm = NSFileManager.defaultManager()
-    let baseURL = NSURL(fileURLWithPath: "/Users/jf/Desktop/Test")!
+        let scanner = ImageScanner(baseURL: baseURL, fm: fm)
+        scanner.scan()
+        let URLs = scanner.scannedImageURLs
 
-    let scanner = ImageScanner(baseURL: baseURL, fm: fm)
-    scanner.scan()
-    let URLs = scanner.scannedImageURLs
-
-    println(URLs)
-    let renamer = ImageRenamer(baseImageName: "japan", fm: fm)
-    renamer.processURLs(URLs)
-//
-//    let converter = RAWConverter(supportedRAWFormats: ["PEF"], fm: fm)
-//    converter.processURLs(URLs)
-
+        // Rename first
+        if let album = options.albumName where options.shouldRename == true {
+            let renamer = ImageRenamer(baseImageName: album, fm: fm)
+            renamer.processURLs(URLs, dryRun: options.dryRun)
+        }
+        
+        // Now process RAWs
+        if options.shouldConvertRAWs {
+            let converter = RAWConverter(supportedRAWFormats: ["PEF"], fm: fm)
+            converter.processURLs(URLs, dryRun: options.dryRun)
+        }
+    }
 }
 
-letsGo()
+letsGo(Options(arguments: Process.arguments))
+

@@ -13,9 +13,8 @@ func letsGo(options: Options) {
     // Validate the the user passed in correct arguements.
     let results = options.validate()
     if let suggestions = results.suggestions where results.valid == false {
-        println("Invalid command-line arguments:")
         for suggestion in suggestions {
-            println("\t🔫 \(suggestion)")
+            println(" 🔫 \(suggestion)")
         }
         return
     }

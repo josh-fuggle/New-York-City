@@ -33,7 +33,7 @@
 		A923A48D1B48B33100C88243 /* ImageRenamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageRenamer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A48F1B48B36300C88243 /* RAWConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RAWConverter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A4911B48F19B00C88243 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Options.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		A9B38A4A1B34EC0100BB636A /* RawUtil */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RawUtil; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9B38A4A1B34EC0100BB636A /* disneyland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = disneyland; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B38A4D1B34EC0100BB636A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,7 +59,7 @@
 		A9B38A4B1B34EC0100BB636A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A9B38A4A1B34EC0100BB636A /* RawUtil */,
+				A9B38A4A1B34EC0100BB636A /* disneyland */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,9 +80,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A9B38A491B34EC0100BB636A /* RawUtil */ = {
+		A9B38A491B34EC0100BB636A /* Disneyland */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9B38A511B34EC0100BB636A /* Build configuration list for PBXNativeTarget "RawUtil" */;
+			buildConfigurationList = A9B38A511B34EC0100BB636A /* Build configuration list for PBXNativeTarget "Disneyland" */;
 			buildPhases = (
 				A9B38A461B34EC0100BB636A /* Sources */,
 				A9B38A471B34EC0100BB636A /* Frameworks */,
@@ -92,9 +92,9 @@
 			);
 			dependencies = (
 			);
-			name = RawUtil;
+			name = Disneyland;
 			productName = RawUtil;
-			productReference = A9B38A4A1B34EC0100BB636A /* RawUtil */;
+			productReference = A9B38A4A1B34EC0100BB636A /* disneyland */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -111,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A9B38A451B34EC0100BB636A /* Build configuration list for PBXProject "RawUtil" */;
+			buildConfigurationList = A9B38A451B34EC0100BB636A /* Build configuration list for PBXProject "Disneyland" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -123,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A9B38A491B34EC0100BB636A /* RawUtil */,
+				A9B38A491B34EC0100BB636A /* Disneyland */,
 			);
 		};
 /* End PBXProject section */
@@ -226,21 +226,21 @@
 		A9B38A521B34EC0100BB636A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = disneyland;
 			};
 			name = Debug;
 		};
 		A9B38A531B34EC0100BB636A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = disneyland;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A9B38A451B34EC0100BB636A /* Build configuration list for PBXProject "RawUtil" */ = {
+		A9B38A451B34EC0100BB636A /* Build configuration list for PBXProject "Disneyland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9B38A4F1B34EC0100BB636A /* Debug */,
@@ -249,7 +249,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9B38A511B34EC0100BB636A /* Build configuration list for PBXNativeTarget "RawUtil" */ = {
+		A9B38A511B34EC0100BB636A /* Build configuration list for PBXNativeTarget "Disneyland" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9B38A521B34EC0100BB636A /* Debug */,

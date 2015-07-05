@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9B38A491B34EC0100BB636A"
-               BuildableName = "RawUtil"
-               BlueprintName = "RawUtil"
-               ReferencedContainer = "container:RawUtil.xcodeproj">
+               BuildableName = "disneyland"
+               BlueprintName = "Disneyland"
+               ReferencedContainer = "container:Disneyland.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9B38A491B34EC0100BB636A"
-            BuildableName = "RawUtil"
-            BlueprintName = "RawUtil"
-            ReferencedContainer = "container:RawUtil.xcodeproj">
+            BuildableName = "disneyland"
+            BlueprintName = "Disneyland"
+            ReferencedContainer = "container:Disneyland.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -53,18 +53,18 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9B38A491B34EC0100BB636A"
-            BuildableName = "RawUtil"
-            BlueprintName = "RawUtil"
-            ReferencedContainer = "container:RawUtil.xcodeproj">
+            BuildableName = "disneyland"
+            BlueprintName = "Disneyland"
+            ReferencedContainer = "container:Disneyland.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "rename"
+            argument = "--path"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "--path"
+            argument = "rename"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9B38A491B34EC0100BB636A"
-            BuildableName = "RawUtil"
-            BlueprintName = "RawUtil"
-            ReferencedContainer = "container:RawUtil.xcodeproj">
+            BuildableName = "disneyland"
+            BlueprintName = "Disneyland"
+            ReferencedContainer = "container:Disneyland.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

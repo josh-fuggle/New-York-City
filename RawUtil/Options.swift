@@ -36,37 +36,46 @@ class Options {
         shouldConvertRAWs = false
         dryRun = false
         
-        for (index, element) in enumerate(arguments) {
+        if arguments.count > 0 {
+            let command = arguments[1]
             
-            if element == "rename" {
+            if command == "rename" {
                 shouldRename = true
-            }
-            
-            else if element == "--album" {
-                albumName = getValue(index, 1, arguments)
-            }
-            
-            else if element == "convert" {
+                
+            } else if command == "convert" {
                 shouldConvertRAWs = true
             }
             
-            else if element == "--path" {
-                basePath = getValue(index, 1, arguments)
+            for (index, element) in enumerate(arguments) {
                 
-                // First character is a fullstop, expand it to the cwd
-                if let firstChar = Array(arrayLiteral: basePath)[0] where firstChar == "." {
-                    basePath?.stringByReplacingOccurrencesOfString(
-                        ".",
-                        withString: NSFileManager.defaultManager().currentDirectoryPath,
-                        options: .allZeros
-                    )
+                if element == "--album" {
+                    albumName = getValue(index, 1, arguments)
+                    
+                } else if element == "--path" {
+                    basePath = getValue(index, 1, arguments)
+                    
+                    // First character is a fullstop, expand it to the cwd
+                    if let firstChar = Array(arrayLiteral: basePath)[0] where firstChar == "." {
+                        basePath?.stringByReplacingOccurrencesOfString(
+                            ".",
+                            withString: NSFileManager.defaultManager().currentDirectoryPath,
+                            options: .allZeros
+                        )
+                    }
+                    
+                    basePath = basePath?.stringByExpandingTildeInPath
+                    
+                } else if element == "--dryrun" {
+                    dryRun = true
+                    
+                    // Check if the immediatley following value is a negating value. If not, assume true.
+                    if let nextElement = getValue(index, 1, arguments) {
+                        if nextElement == "false" || nextElement == "0" || nextElement == "NO" {
+                            dryRun = false
+                        }
+                    }
+                    
                 }
-                
-                basePath = basePath?.stringByExpandingTildeInPath
-            }
-            
-            else if element == "--dryrun" {
-                dryRun = true
             }
         }
     }
@@ -75,13 +84,18 @@ class Options {
         
         var errors = [String]()
         
-        if basePath == nil {
-            errors.append("You must specify a --path parameter.")
-        }
-        
-        if shouldRename {
-            if albumName == nil {
-                errors.append("You must specify a --album parameter.")
+        if shouldConvertRAWs == false && shouldRename == false {
+            errors.append("You must specify either the 'rename' or 'convert' command as the first argument.")
+            
+        } else {
+            if basePath == nil {
+                errors.append("You must specify a --path parameter.")
+            }
+            
+            if shouldRename {
+                if albumName == nil {
+                    errors.append("You must specify a --album parameter.")
+                }
             }
         }
         

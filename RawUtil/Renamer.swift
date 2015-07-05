@@ -1,5 +1,5 @@
 //
-//  ImageRenamer.swift
+//  Renamer.swift
 //  Disneyland
 //
 //  Created by Joshua Fuglsang on 5/07/2015.
@@ -9,7 +9,7 @@
 import Foundation
 import ImageIO
 
-class ImageRenamer: ImageProcessor {
+class Renamer: ImageProcessor {
     
     let baseImageName: String
     let fm: NSFileManager

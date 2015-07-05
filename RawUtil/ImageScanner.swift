@@ -1,5 +1,5 @@
 //
-//  ImageProcessor.swift
+//  ImageScanner.swift
 //  Disneyland
 //
 //  Created by Joshua Fuglsang on 5/07/2015.

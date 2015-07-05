@@ -30,7 +30,7 @@ func letsGo(options: Options) {
 
         // Rename first
         if let album = options.albumName where options.shouldRename == true {
-            let renamer = ImageRenamer(baseImageName: album, fm: fm)
+            let renamer = Renamer(baseImageName: album, fm: fm)
             renamer.processURLs(URLs, dryRun: options.dryRun)
         }
         

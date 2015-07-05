@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A923A48A1B48ADB500C88243 /* ImageScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A4891B48ADB500C88243 /* ImageScanner.swift */; };
 		A923A48C1B48AF5F00C88243 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A48B1B48AF5F00C88243 /* ImageProcessor.swift */; };
-		A923A48E1B48B33100C88243 /* ImageRenamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A48D1B48B33100C88243 /* ImageRenamer.swift */; };
+		A923A48E1B48B33100C88243 /* Renamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A48D1B48B33100C88243 /* Renamer.swift */; };
 		A923A4901B48B36300C88243 /* RAWConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A48F1B48B36300C88243 /* RAWConverter.swift */; };
 		A923A4921B48F19B00C88243 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A4911B48F19B00C88243 /* Options.swift */; };
 		A9B38A4E1B34EC0100BB636A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38A4D1B34EC0100BB636A /* main.swift */; };
@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		A923A4891B48ADB500C88243 /* ImageScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageScanner.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A48B1B48AF5F00C88243 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
-		A923A48D1B48B33100C88243 /* ImageRenamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ImageRenamer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A923A48D1B48B33100C88243 /* Renamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Renamer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A48F1B48B36300C88243 /* RAWConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RAWConverter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A4911B48F19B00C88243 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Options.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A9B38A4A1B34EC0100BB636A /* disneyland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = disneyland; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,7 +70,7 @@
 				A9B38A4D1B34EC0100BB636A /* main.swift */,
 				A923A4891B48ADB500C88243 /* ImageScanner.swift */,
 				A923A48B1B48AF5F00C88243 /* ImageProcessor.swift */,
-				A923A48D1B48B33100C88243 /* ImageRenamer.swift */,
+				A923A48D1B48B33100C88243 /* Renamer.swift */,
 				A923A48F1B48B36300C88243 /* RAWConverter.swift */,
 				A923A4911B48F19B00C88243 /* Options.swift */,
 			);
@@ -135,7 +135,7 @@
 			files = (
 				A923A48A1B48ADB500C88243 /* ImageScanner.swift in Sources */,
 				A923A48C1B48AF5F00C88243 /* ImageProcessor.swift in Sources */,
-				A923A48E1B48B33100C88243 /* ImageRenamer.swift in Sources */,
+				A923A48E1B48B33100C88243 /* Renamer.swift in Sources */,
 				A923A4901B48B36300C88243 /* RAWConverter.swift in Sources */,
 				A923A4921B48F19B00C88243 /* Options.swift in Sources */,
 				A9B38A4E1B34EC0100BB636A /* main.swift in Sources */,

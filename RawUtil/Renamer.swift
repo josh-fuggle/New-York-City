@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ImageIO
 
 class Renamer: ImageProcessor {
     
@@ -31,30 +30,21 @@ class Renamer: ImageProcessor {
         
         println("🏁 Process image at URL for renaming: \(from)")
         
-        if let source = CGImageSourceCreateWithURL(from, nil) {
+        if let baseURL = from.URLByDeletingLastPathComponent, originalExtension = from.pathExtension?.uppercaseString {
             
-            let imageRef = CGImageSourceCreateImageAtIndex(source, 0, nil)
-            let imageMetadata = CGImageSourceCopyMetadataAtIndex(source, 0, nil)
+            var to = baseURL.URLByAppendingPathComponent(calcImageName(from))
+            to = to.URLByAppendingPathExtension(originalExtension)
             
-            if let baseURL = from.URLByDeletingLastPathComponent, originalExtension = from.pathExtension {
-                
-                var to = baseURL.URLByAppendingPathComponent(calcImageName(source))
-                to = to.URLByAppendingPathExtension(originalExtension)
-                
-                if !dryRun {
-                    var error: NSError?
-                    fm.moveItemAtURL(from, toURL: to, error: &error)
-                }
-                
-                println("✅ Moved image to path: \(to)")
+            if !dryRun {
+                var error: NSError?
+                fm.moveItemAtURL(from, toURL: to, error: &error)
             }
             
-        } else {
-            println("❌ Could not load image at URL.")
+            println("✅ Moved image to path: \(to)")
         }
     }
     
-    func calcImageName(imageSource: CGImageSourceRef) -> String {
+    func calcImageName(URL: NSURL) -> String {
         
         func formatSystemDate(dateTaken: String) -> String {
             let inFormatter = NSDateFormatter()
@@ -73,46 +63,26 @@ class Renamer: ImageProcessor {
         var nameComponents = NSMutableArray()
         nameComponents.addObject(baseImageName)
         
-        let imageProperties = CGImageSourceCopyPropertiesAtIndex(imageSource, 0, nil)
+        if let properties = JGFPhotoProperties.propertyTreeWithURL(URL) {
         
-        // Get date taken
-        let exifPropertiesPointer = CFDictionaryGetValue(imageProperties, unsafeAddressOf(kCGImagePropertyExifDictionary))
-        if exifPropertiesPointer != nil {
-            let exifPropertiesUnsafe = unsafeBitCast(exifPropertiesPointer, CFDictionaryRef.self)
-            
-            let dateTakenPointer = CFDictionaryGetValue(exifPropertiesUnsafe, unsafeAddressOf(kCGImagePropertyExifDateTimeOriginal))
-            if dateTakenPointer != nil {
-                let dateTakenUnsafe = unsafeBitCast(dateTakenPointer, CFStringRef.self)
-                let dateTaken = dateTakenUnsafe as! String
-                nameComponents.addObject(formatSystemDate(dateTaken))
+            if let Exif = properties.ExifData, dateTime = Exif.dateTimeOriginal {
+                nameComponents.addObject(formatSystemDate(dateTime.value))
                 dateExtracted = true
             }
             
-        }
-        
-        
-        // Camera Model (GoPro, Pentax, etc.)
-        let tiffPropertiesPointer = CFDictionaryGetValue(imageProperties, unsafeAddressOf(kCGImagePropertyTIFFDictionary))
-        
-        if tiffPropertiesPointer != nil {
-            let tiffPropertiesUnsafe = unsafeBitCast(tiffPropertiesPointer, CFDictionaryRef.self)
             
-            if dateExtracted == false {
-                let dateTimePointer = CFDictionaryGetValue(tiffPropertiesUnsafe, unsafeAddressOf(kCGImagePropertyTIFFDateTime))
-                if dateTimePointer != nil {
-                    let dateTimeUnsafe = unsafeBitCast(dateTimePointer, CFStringRef.self)
-                    let dateTime = dateTimeUnsafe as! String
-                    nameComponents.addObject(formatSystemDate(dateTime))
+            if let TIFF = properties.TIFFData {
+                
+                if let dateTime = TIFF.dateTime where dateExtracted == false {
+                    nameComponents.addObject(formatSystemDate(dateTime.value))
                     dateExtracted = true
                 }
-            }
-            
-            let makePointer = CFDictionaryGetValue(tiffPropertiesUnsafe, unsafeAddressOf(kCGImagePropertyTIFFModel))
-            if makePointer != nil {
-                let unsafeMake = unsafeBitCast(makePointer, CFStringRef.self)
-                var makeString = unsafeMake as! String
-                var makeComponents = makeString.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: " +,.-_"))
-                nameComponents.addObject(makeComponents.first!)
+                
+                if let model = TIFF.model {
+                    var makeComponents = model.value.componentsSeparatedByCharactersInSet(NSCharacterSet(charactersInString: " +,.-_"))
+                    nameComponents.addObject(makeComponents.first!)
+                }
+                
             }
         }
         

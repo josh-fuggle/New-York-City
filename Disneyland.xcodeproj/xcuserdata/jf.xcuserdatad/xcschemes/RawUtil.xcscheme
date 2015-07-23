@@ -60,11 +60,11 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "--path"
+            argument = "rename"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "rename"
+            argument = "--path"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -76,7 +76,7 @@
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "Test"
+            argument = "Random"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>

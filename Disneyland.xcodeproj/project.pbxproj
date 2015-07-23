@@ -12,6 +12,8 @@
 		A923A48E1B48B33100C88243 /* Renamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A48D1B48B33100C88243 /* Renamer.swift */; };
 		A923A4901B48B36300C88243 /* RAWConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A48F1B48B36300C88243 /* RAWConverter.swift */; };
 		A923A4921B48F19B00C88243 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A923A4911B48F19B00C88243 /* Options.swift */; };
+		A92A7D0D1B5E707B0040108F /* JGFPhotoMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A92A7D0C1B5E707B0040108F /* JGFPhotoMetadata.m */; };
+		A96391261B60E2EF00277232 /* JGFPhotoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A96391251B60E2EF00277232 /* JGFPhotoProperty.m */; };
 		A9B38A4E1B34EC0100BB636A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9B38A4D1B34EC0100BB636A /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,11 @@
 		A923A48D1B48B33100C88243 /* Renamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Renamer.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A48F1B48B36300C88243 /* RAWConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = RAWConverter.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		A923A4911B48F19B00C88243 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Options.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A92A7D0A1B5E707B0040108F /* Disneyland-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Disneyland-Bridging-Header.h"; sourceTree = "<group>"; };
+		A92A7D0B1B5E707B0040108F /* JGFPhotoMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoMetadata.h; sourceTree = "<group>"; };
+		A92A7D0C1B5E707B0040108F /* JGFPhotoMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoMetadata.m; sourceTree = "<group>"; };
+		A96391241B60E2EF00277232 /* JGFPhotoProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoProperty.h; sourceTree = "<group>"; };
+		A96391251B60E2EF00277232 /* JGFPhotoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperty.m; sourceTree = "<group>"; };
 		A9B38A4A1B34EC0100BB636A /* disneyland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = disneyland; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9B38A4D1B34EC0100BB636A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +80,11 @@
 				A923A48D1B48B33100C88243 /* Renamer.swift */,
 				A923A48F1B48B36300C88243 /* RAWConverter.swift */,
 				A923A4911B48F19B00C88243 /* Options.swift */,
+				A92A7D0B1B5E707B0040108F /* JGFPhotoMetadata.h */,
+				A92A7D0C1B5E707B0040108F /* JGFPhotoMetadata.m */,
+				A92A7D0A1B5E707B0040108F /* Disneyland-Bridging-Header.h */,
+				A96391241B60E2EF00277232 /* JGFPhotoProperty.h */,
+				A96391251B60E2EF00277232 /* JGFPhotoProperty.m */,
 			);
 			path = RawUtil;
 			sourceTree = "<group>";
@@ -136,8 +148,10 @@
 				A923A48A1B48ADB500C88243 /* ImageScanner.swift in Sources */,
 				A923A48C1B48AF5F00C88243 /* ImageProcessor.swift in Sources */,
 				A923A48E1B48B33100C88243 /* Renamer.swift in Sources */,
+				A96391261B60E2EF00277232 /* JGFPhotoProperty.m in Sources */,
 				A923A4901B48B36300C88243 /* RAWConverter.swift in Sources */,
 				A923A4921B48F19B00C88243 /* Options.swift in Sources */,
+				A92A7D0D1B5E707B0040108F /* JGFPhotoMetadata.m in Sources */,
 				A9B38A4E1B34EC0100BB636A /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,14 +240,23 @@
 		A9B38A521B34EC0100BB636A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = disneyland;
+				SWIFT_OBJC_BRIDGING_HEADER = "RawUtil/Disneyland-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A9B38A531B34EC0100BB636A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = disneyland;
+				SWIFT_OBJC_BRIDGING_HEADER = "RawUtil/Disneyland-Bridging-Header.h";
 			};
 			name = Release;
 		};

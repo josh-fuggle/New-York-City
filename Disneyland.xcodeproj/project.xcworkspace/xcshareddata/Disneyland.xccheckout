@@ -10,14 +10,14 @@
 	<string>Disneyland</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>F41BFF5B881DCC41788AA866D1EBABB8CF288873</key>
+		<key>B4FBBE35674E652628B94C8ED2F1747BF204A686</key>
 		<string>https://github.com/josh-fuggle/Disneyland.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Disneyland.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>F41BFF5B881DCC41788AA866D1EBABB8CF288873</key>
+		<key>B4FBBE35674E652628B94C8ED2F1747BF204A686</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +25,14 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>F41BFF5B881DCC41788AA866D1EBABB8CF288873</string>
+	<string>B4FBBE35674E652628B94C8ED2F1747BF204A686</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>F41BFF5B881DCC41788AA866D1EBABB8CF288873</string>
+			<string>B4FBBE35674E652628B94C8ED2F1747BF204A686</string>
 			<key>IDESourceControlWCCName</key>
 			<string>RawUtil</string>
 		</dict>

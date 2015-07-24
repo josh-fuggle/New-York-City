@@ -1,5 +1,5 @@
-__Disneyland__ is a set of image processing tools that I have created to help me improve my photo management workflow.
-Why __Disneyland__? Well, this is a set of tools for photographers. So I named the tool after the most photographed place on Earth, according to Instagram.
+__New York City__ is a set of image processing tools that I have created to help me improve my photo management workflow.
+Why __New York City__? Well, this is a set of tools for photographers. So I named the tool after the most photographed city on Earth, according to Google.
 
 What tools does this repo contain? Just two so far:
 

@@ -1,6 +1,6 @@
 //
 //  JGFPhotoProperty.h
-//  Disneyland
+//  New York City
 //
 //  Created by Joshua Fuglsang on 23/07/2015.
 //  Copyright (c) 2015 josh-fuggle. All rights reserved.

@@ -8,10 +8,6 @@
 
 #import "JGFPhotoMetadata.h"
 
-// This routine is provided so that the panel can dynamically
-// support all the file formats supported by ImageIO.
-//
-
 static NSString *ImageIOLocalizedString(NSString* key)
 {
     static NSBundle* b = nil;

@@ -14,13 +14,15 @@ func letsGo(options: Options) {
     let results = options.validate()
     if let suggestions = results.suggestions where results.valid == false {
         for suggestion in suggestions {
-            println(" 🔫 \(suggestion)")
+            print(" 🔫 \(suggestion)")
         }
         return
     }
     
     // Let's begin
-    if let path = options.basePath, let baseURL = NSURL(fileURLWithPath: path) {
+    if let path = options.basePath {
+        
+        let baseURL = NSURL(fileURLWithPath: path)
         
         let fm = NSFileManager.defaultManager()
 

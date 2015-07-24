@@ -24,7 +24,7 @@ class Options {
         
         func getValue(currentIndex: Int, offset: Int, arguments: [String]) -> String? {
             let nextIndex = (currentIndex + offset)
-            if nextIndex >= count(arguments) {
+            if nextIndex >= arguments.count {
                 return nil
             }
             return arguments[nextIndex]
@@ -46,20 +46,19 @@ class Options {
                 shouldConvertRAWs = true
             }
             
-            for (index, element) in enumerate(arguments) {
+            for (index, element) in arguments.enumerate() {
                 
                 if element == "--album" {
-                    albumName = getValue(index, 1, arguments)
+                    albumName = getValue(index, offset: 1, arguments: arguments)
                     
                 } else if element == "--path" {
-                    basePath = getValue(index, 1, arguments)
+                    basePath = getValue(index, offset: 1, arguments: arguments)
                     
                     // First character is a fullstop, expand it to the cwd
                     if let firstChar = Array(arrayLiteral: basePath)[0] where firstChar == "." {
                         basePath?.stringByReplacingOccurrencesOfString(
                             ".",
-                            withString: NSFileManager.defaultManager().currentDirectoryPath,
-                            options: .allZeros
+                            withString: NSFileManager.defaultManager().currentDirectoryPath
                         )
                     }
                     
@@ -69,7 +68,7 @@ class Options {
                     dryRun = true
                     
                     // Check if the immediatley following value is a negating value. If not, assume true.
-                    if let nextElement = getValue(index, 1, arguments) {
+                    if let nextElement = getValue(index, offset: 1, arguments: arguments) {
                         if nextElement == "false" || nextElement == "0" || nextElement == "NO" {
                             dryRun = false
                         }
@@ -99,7 +98,7 @@ class Options {
             }
         }
         
-        if count(errors) > 0 {
+        if errors.count > 0 {
             return (false, errors)
         }
         

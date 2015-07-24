@@ -28,7 +28,7 @@ class Renamer: ImageProcessor {
     
     func processURL(URL from: NSURL, dryRun: Bool) {
         
-        println("🏁 Process image at URL for renaming: \(from)")
+        print("🏁 Process image at URL for renaming: \(from)")
         
         if let baseURL = from.URLByDeletingLastPathComponent, originalExtension = from.pathExtension?.uppercaseString {
             
@@ -36,11 +36,14 @@ class Renamer: ImageProcessor {
             to = to.URLByAppendingPathExtension(originalExtension)
             
             if !dryRun {
-                var error: NSError?
-                fm.moveItemAtURL(from, toURL: to, error: &error)
+                do {
+                    try fm.moveItemAtURL(from, toURL: to)
+                } catch {
+                    // TODO
+                }
             }
             
-            println("✅ Moved image to path: \(to)")
+            print("✅ Moved image to path: \(to)")
         }
     }
     
@@ -60,7 +63,7 @@ class Renamer: ImageProcessor {
         
         // Assemble all the name components
         var dateExtracted = false
-        var nameComponents = NSMutableArray()
+        let nameComponents = NSMutableArray()
         nameComponents.addObject(baseImageName)
         
         if let properties = JGFPhotoProperties.propertyTreeWithURL(URL) {
@@ -87,7 +90,7 @@ class Renamer: ImageProcessor {
         }
         
         if dateExtracted == false {
-            println("❌ Unable to extract creation date.")
+            print("❌ Unable to extract creation date.")
         }
         
         // Build the new name

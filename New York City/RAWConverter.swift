@@ -11,13 +11,17 @@ import ImageIO
 
 func CGImageWriteToURL(image: CGImageRef, URL: NSURL, metadata: CGImageMetadataRef) {
     let url = URL as CFURLRef
-    let destination = CGImageDestinationCreateWithURL(url, kUTTypeJPEG, 1, nil)
-    CGImageDestinationAddImageAndMetadata(destination, image, metadata, nil)
-    
-    if (CGImageDestinationFinalize(destination)) {
-        println("✅ Saved image to URL: \(URL)")
-    } else {
-        println("❌ Could not save image to URL: \(URL)")
+    if let destination = CGImageDestinationCreateWithURL(url, kUTTypeJPEG, 1, nil) {
+        CGImageDestinationAddImageAndMetadata(destination, image, metadata, nil)
+        
+        if (CGImageDestinationFinalize(destination)) {
+            print("✅ Saved image to URL: \(URL)")
+        } else {
+            print("❌ Could not save image to URL: \(URL)")
+        }
+    }
+    else {
+        // TODO
     }
 }
 
@@ -40,50 +44,52 @@ class RAWConverter: ImageProcessor {
     }
     
     func processURL(URL from: NSURL, dryRun: Bool) {
-        println("🏁 Process image at URL for conversion: \(from)")
+        print("🏁 Process image at URL for conversion: \(from)")
         
-        if let source = CGImageSourceCreateWithURL(from, nil) {
-            
-            let imageRef = CGImageSourceCreateImageAtIndex(source, 0, nil)
-            let imageMetadata = CGImageSourceCopyMetadataAtIndex(source, 0, nil)
+        if let source = CGImageSourceCreateWithURL(from, nil),
+            imageRef = CGImageSourceCreateImageAtIndex(source, 0, nil),
+            imageMetadata = CGImageSourceCopyMetadataAtIndex(source, 0, nil) {
             
             if let baseURL = from.URLByDeletingLastPathComponent,
                 originalExtension = from.pathExtension,
                 name = from.lastPathComponent?.stringByDeletingPathExtension {
                     
-                    var JPEGDirectory = baseURL
-                    var RAWDirectory = baseURL.URLByAppendingPathComponent("RAW")
+                    let JPEGDirectory = baseURL
+                    let RAWDirectory = baseURL.URLByAppendingPathComponent("RAW")
                     
-                    var error: NSError?
-                    
-                    if contains(self.supportedRAWFormats, originalExtension) {
+                    if self.supportedRAWFormats.contains(originalExtension) {
                         
                         var originalDestination = RAWDirectory.URLByAppendingPathComponent(name)
                         originalDestination = originalDestination.URLByAppendingPathExtension(originalExtension)
                         
                         if !dryRun {
-                            fm.moveItemAtURL(from, toURL: originalDestination, error: &error)
-                            fm.createDirectoryAtURL(RAWDirectory, withIntermediateDirectories: true, attributes: nil, error: &error)
+                            
+                            do {
+                                try fm.moveItemAtURL(from, toURL: originalDestination)
+                                try fm.createDirectoryAtURL(RAWDirectory, withIntermediateDirectories: true, attributes: nil)
+                            } catch {
+                                // TODO
+                            }
                         }
                         
-                        println("✅ Moved original to directory: \(originalDestination)")
+                        print("✅ Moved original to directory: \(originalDestination)")
                         
                         var newDestination = JPEGDirectory.URLByAppendingPathComponent(name.stringByDeletingPathExtension)
                         newDestination = newDestination.URLByAppendingPathExtension("JPG")
                         
                         if !dryRun {
-                            CGImageWriteToURL(imageRef, newDestination, imageMetadata)
+                            CGImageWriteToURL(imageRef, URL: newDestination, metadata: imageMetadata)
                         }
                         
-                        println("✅ Exported compressed copy to directory: \(newDestination)")
+                        print("✅ Exported compressed copy to directory: \(newDestination)")
                         
                     } else {
-                        println("❌ Image is not of a supported RAW format: \(from)")
+                        print("❌ Image is not of a supported RAW format: \(from)")
                     }
             }
             
         } else {
-            println("❌ Could not load image at URL: \(from)")
+            print("❌ Could not load image at URL: \(from)")
         }
     }
 }

@@ -28,7 +28,7 @@ class ImageScanner {
         let enumerator = fm.enumeratorAtURL(
             URL,
             includingPropertiesForKeys: nil,
-            options: (.SkipsHiddenFiles | .SkipsPackageDescendants),
+            options: (.SkipsPackageDescendants),
             errorHandler: { _, _ -> Bool in
                 return true
         })
@@ -41,30 +41,34 @@ class ImageScanner {
             for node in results {
                 
                 var isDirectory: AnyObject?
-                var error: NSError?
                 
-                node.getResourceValue(&isDirectory, forKey: NSURLIsDirectoryKey, error: &error)
+                do {
+                    try node.getResourceValue(&isDirectory, forKey: NSURLIsDirectoryKey)
+                } catch {
+                    // TODO
+                }
                 
-                println("🏁 About to check if file can be processed: \(node)")
+                print("🏁 About to check if file can be processed: \(node)")
                 
                 if let isDirectory = isDirectory as? Bool where isDirectory == true {
                     directoryURLs.append(node)
-                    println("✅ File can be processed as a directory.")
+                    print("✅ File can be processed as a directory.")
                     
                 } else {
                     
                     // If the file is an image, then add it for processing.
                     if let fileExt = node.pathExtension {
                         
-                        let unmanagedFileUTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExt, nil)
-                        let fileUTI = unmanagedFileUTI.takeRetainedValue()
-                        let isImage: Bool = (UTTypeConformsTo(fileUTI, kUTTypeImage) != 0)
-                        
-                        if isImage {
-                            imageURLs.append(node)
-                            println("✅ File can be processed as an image.")
-                        } else {
-                            println("❌ File extension is not compatible: \(fileExt)")
+                        if let unmanagedFileUTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileExt, nil) {
+                            let fileUTI = unmanagedFileUTI.takeRetainedValue()
+                            let isImage: Bool = (UTTypeConformsTo(fileUTI, kUTTypeImage) != 0)
+                            
+                            if isImage {
+                                imageURLs.append(node)
+                                print("✅ File can be processed as an image.")
+                            } else {
+                                print("❌ File extension is not compatible: \(fileExt)")
+                            }
                         }
                     }
                 }

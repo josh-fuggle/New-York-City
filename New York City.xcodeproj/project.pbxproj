@@ -1,0 +1,287 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A98286291B6249A70049D193 /* JGFPhotoMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A98286261B6249A70049D193 /* JGFPhotoMetadata.m */; };
+		A982862A1B6249A70049D193 /* JGFPhotoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A98286281B6249A70049D193 /* JGFPhotoProperty.m */; };
+		A98286311B6249D70049D193 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862B1B6249D70049D193 /* ImageProcessor.swift */; };
+		A98286321B6249D70049D193 /* ImageScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862C1B6249D70049D193 /* ImageScanner.swift */; };
+		A98286331B6249D70049D193 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862D1B6249D70049D193 /* main.swift */; };
+		A98286341B6249D70049D193 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862E1B6249D70049D193 /* Options.swift */; };
+		A98286351B6249D70049D193 /* RAWConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862F1B6249D70049D193 /* RAWConverter.swift */; };
+		A98286361B6249D70049D193 /* Renamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98286301B6249D70049D193 /* Renamer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A98286181B62498D0049D193 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		A982861A1B62498D0049D193 /* nyc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nyc; sourceTree = BUILT_PRODUCTS_DIR; };
+		A98286241B6249A60049D193 /* New York City-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "New York City-Bridging-Header.h"; sourceTree = "<group>"; };
+		A98286251B6249A70049D193 /* JGFPhotoMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoMetadata.h; sourceTree = "<group>"; };
+		A98286261B6249A70049D193 /* JGFPhotoMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoMetadata.m; sourceTree = "<group>"; };
+		A98286271B6249A70049D193 /* JGFPhotoProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoProperty.h; sourceTree = "<group>"; };
+		A98286281B6249A70049D193 /* JGFPhotoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperty.m; sourceTree = "<group>"; };
+		A982862B1B6249D70049D193 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		A982862C1B6249D70049D193 /* ImageScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScanner.swift; sourceTree = "<group>"; };
+		A982862D1B6249D70049D193 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A982862E1B6249D70049D193 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		A982862F1B6249D70049D193 /* RAWConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWConverter.swift; sourceTree = "<group>"; };
+		A98286301B6249D70049D193 /* Renamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renamer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A98286171B62498D0049D193 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A98286111B62498D0049D193 = {
+			isa = PBXGroup;
+			children = (
+				A982861C1B62498D0049D193 /* New York City */,
+				A982861B1B62498D0049D193 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A982861B1B62498D0049D193 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A982861A1B62498D0049D193 /* nyc */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A982861C1B62498D0049D193 /* New York City */ = {
+			isa = PBXGroup;
+			children = (
+				A982862B1B6249D70049D193 /* ImageProcessor.swift */,
+				A982862C1B6249D70049D193 /* ImageScanner.swift */,
+				A982862D1B6249D70049D193 /* main.swift */,
+				A982862E1B6249D70049D193 /* Options.swift */,
+				A982862F1B6249D70049D193 /* RAWConverter.swift */,
+				A98286301B6249D70049D193 /* Renamer.swift */,
+				A98286251B6249A70049D193 /* JGFPhotoMetadata.h */,
+				A98286261B6249A70049D193 /* JGFPhotoMetadata.m */,
+				A98286271B6249A70049D193 /* JGFPhotoProperty.h */,
+				A98286281B6249A70049D193 /* JGFPhotoProperty.m */,
+				A98286241B6249A60049D193 /* New York City-Bridging-Header.h */,
+			);
+			path = "New York City";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A98286191B62498D0049D193 /* New York City */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A98286211B62498D0049D193 /* Build configuration list for PBXNativeTarget "New York City" */;
+			buildPhases = (
+				A98286161B62498D0049D193 /* Sources */,
+				A98286171B62498D0049D193 /* Frameworks */,
+				A98286181B62498D0049D193 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "New York City";
+			productName = "New York City";
+			productReference = A982861A1B62498D0049D193 /* nyc */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A98286121B62498D0049D193 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "josh-fuggle";
+				TargetAttributes = {
+					A98286191B62498D0049D193 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+				};
+			};
+			buildConfigurationList = A98286151B62498D0049D193 /* Build configuration list for PBXProject "New York City" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A98286111B62498D0049D193;
+			productRefGroup = A982861B1B62498D0049D193 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A98286191B62498D0049D193 /* New York City */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A98286161B62498D0049D193 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A982862A1B6249A70049D193 /* JGFPhotoProperty.m in Sources */,
+				A98286331B6249D70049D193 /* main.swift in Sources */,
+				A98286361B6249D70049D193 /* Renamer.swift in Sources */,
+				A98286311B6249D70049D193 /* ImageProcessor.swift in Sources */,
+				A98286321B6249D70049D193 /* ImageScanner.swift in Sources */,
+				A98286341B6249D70049D193 /* Options.swift in Sources */,
+				A98286351B6249D70049D193 /* RAWConverter.swift in Sources */,
+				A98286291B6249A70049D193 /* JGFPhotoMetadata.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A982861F1B62498D0049D193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A98286201B62498D0049D193 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		A98286221B62498D0049D193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = nyc;
+				SWIFT_OBJC_BRIDGING_HEADER = "New York City/New York City-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A98286231B62498D0049D193 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = nyc;
+				SWIFT_OBJC_BRIDGING_HEADER = "New York City/New York City-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A98286151B62498D0049D193 /* Build configuration list for PBXProject "New York City" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A982861F1B62498D0049D193 /* Debug */,
+				A98286201B62498D0049D193 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A98286211B62498D0049D193 /* Build configuration list for PBXNativeTarget "New York City" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A98286221B62498D0049D193 /* Debug */,
+				A98286231B62498D0049D193 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A98286121B62498D0049D193 /* Project object */;
+}

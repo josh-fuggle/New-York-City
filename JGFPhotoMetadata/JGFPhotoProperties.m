@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 josh-fuggle. All rights reserved.
 //
 
-#import "JGFPhotoMetadata.h"
+#import "JGFPhotoProperties.h"
 
 static NSString *ImageIOLocalizedString(NSString* key)
 {

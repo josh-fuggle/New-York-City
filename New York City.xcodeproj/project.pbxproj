@@ -7,15 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A98286291B6249A70049D193 /* JGFPhotoMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = A98286261B6249A70049D193 /* JGFPhotoMetadata.m */; };
-		A982862A1B6249A70049D193 /* JGFPhotoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A98286281B6249A70049D193 /* JGFPhotoProperty.m */; };
-		A98286311B6249D70049D193 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862B1B6249D70049D193 /* ImageProcessor.swift */; };
-		A98286321B6249D70049D193 /* ImageScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862C1B6249D70049D193 /* ImageScanner.swift */; };
+		A9043D841B63784A0081B774 /* NYCCore.h in Headers */ = {isa = PBXBuildFile; fileRef = A9043D831B63784A0081B774 /* NYCCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9043D8B1B63784A0081B774 /* NYCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9043D811B63784A0081B774 /* NYCCore.framework */; };
+		A9043D901B63784A0081B774 /* NYCCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043D8F1B63784A0081B774 /* NYCCoreTests.m */; };
+		A9043DA11B6378690081B774 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043D981B6378690081B774 /* ImageProcessor.swift */; };
+		A9043DA21B6378690081B774 /* ImageScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043D991B6378690081B774 /* ImageScanner.swift */; };
+		A9043DA71B6378690081B774 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043D9E1B6378690081B774 /* Options.swift */; };
+		A9043DA81B6378690081B774 /* RAWConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043D9F1B6378690081B774 /* RAWConverter.swift */; };
+		A9043DA91B6378690081B774 /* Renamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043DA01B6378690081B774 /* Renamer.swift */; };
+		A9043DAD1B6378F90081B774 /* NYCCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9043D811B63784A0081B774 /* NYCCore.framework */; };
+		A9043DBD1B6379650081B774 /* JGFPhotoMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9043DB31B6379650081B774 /* JGFPhotoMetadata.framework */; };
+		A9043DC21B6379650081B774 /* JGFPhotoMetadataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043DC11B6379650081B774 /* JGFPhotoMetadataTests.m */; };
+		A9043DCE1B63797D0081B774 /* JGFPhotoMetadata.h in Headers */ = {isa = PBXBuildFile; fileRef = A9043DCA1B63797D0081B774 /* JGFPhotoMetadata.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9043DD01B63797D0081B774 /* JGFPhotoProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = A9043DCC1B63797D0081B774 /* JGFPhotoProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9043DD11B63797D0081B774 /* JGFPhotoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */; };
+		A9043DD41B6379E70081B774 /* JGFPhotoProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = A9043DD21B6379E70081B774 /* JGFPhotoProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9043DD51B6379E70081B774 /* JGFPhotoProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043DD31B6379E70081B774 /* JGFPhotoProperties.m */; };
+		A9043DD81B637A190081B774 /* JGFPhotoMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9043DB31B6379650081B774 /* JGFPhotoMetadata.framework */; };
 		A98286331B6249D70049D193 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862D1B6249D70049D193 /* main.swift */; };
-		A98286341B6249D70049D193 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862E1B6249D70049D193 /* Options.swift */; };
-		A98286351B6249D70049D193 /* RAWConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862F1B6249D70049D193 /* RAWConverter.swift */; };
-		A98286361B6249D70049D193 /* Renamer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98286301B6249D70049D193 /* Renamer.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9043D8C1B63784A0081B774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98286121B62498D0049D193 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9043D801B63784A0081B774;
+			remoteInfo = NYCCore;
+		};
+		A9043DAB1B6378F30081B774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98286121B62498D0049D193 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9043D801B63784A0081B774;
+			remoteInfo = NYCCore;
+		};
+		A9043DBE1B6379650081B774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98286121B62498D0049D193 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9043DB21B6379650081B774;
+			remoteInfo = JGFPhotoMetadata;
+		};
+		A9043DD61B637A130081B774 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A98286121B62498D0049D193 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9043DB21B6379650081B774;
+			remoteInfo = JGFPhotoMetadata;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A98286181B62498D0049D193 /* CopyFiles */ = {
@@ -30,35 +71,127 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A9043D811B63784A0081B774 /* NYCCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NYCCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9043D831B63784A0081B774 /* NYCCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCCore.h; sourceTree = "<group>"; };
+		A9043D851B63784A0081B774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9043D8A1B63784A0081B774 /* NYCCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NYCCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9043D8F1B63784A0081B774 /* NYCCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCCoreTests.m; sourceTree = "<group>"; };
+		A9043D911B63784A0081B774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9043D981B6378690081B774 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		A9043D991B6378690081B774 /* ImageScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScanner.swift; sourceTree = "<group>"; };
+		A9043D9E1B6378690081B774 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		A9043D9F1B6378690081B774 /* RAWConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWConverter.swift; sourceTree = "<group>"; };
+		A9043DA01B6378690081B774 /* Renamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renamer.swift; sourceTree = "<group>"; };
+		A9043DB31B6379650081B774 /* JGFPhotoMetadata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGFPhotoMetadata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9043DB71B6379650081B774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9043DBC1B6379650081B774 /* JGFPhotoMetadataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JGFPhotoMetadataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9043DC11B6379650081B774 /* JGFPhotoMetadataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoMetadataTests.m; sourceTree = "<group>"; };
+		A9043DC31B6379650081B774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9043DCA1B63797D0081B774 /* JGFPhotoMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoMetadata.h; sourceTree = "<group>"; };
+		A9043DCC1B63797D0081B774 /* JGFPhotoProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoProperty.h; sourceTree = "<group>"; };
+		A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperty.m; sourceTree = "<group>"; };
+		A9043DD21B6379E70081B774 /* JGFPhotoProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoProperties.h; sourceTree = "<group>"; };
+		A9043DD31B6379E70081B774 /* JGFPhotoProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperties.m; sourceTree = "<group>"; };
 		A982861A1B62498D0049D193 /* nyc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nyc; sourceTree = BUILT_PRODUCTS_DIR; };
-		A98286241B6249A60049D193 /* New York City-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "New York City-Bridging-Header.h"; sourceTree = "<group>"; };
-		A98286251B6249A70049D193 /* JGFPhotoMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoMetadata.h; sourceTree = "<group>"; };
-		A98286261B6249A70049D193 /* JGFPhotoMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoMetadata.m; sourceTree = "<group>"; };
-		A98286271B6249A70049D193 /* JGFPhotoProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoProperty.h; sourceTree = "<group>"; };
-		A98286281B6249A70049D193 /* JGFPhotoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperty.m; sourceTree = "<group>"; };
-		A982862B1B6249D70049D193 /* ImageProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
-		A982862C1B6249D70049D193 /* ImageScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageScanner.swift; sourceTree = "<group>"; };
 		A982862D1B6249D70049D193 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		A982862E1B6249D70049D193 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
-		A982862F1B6249D70049D193 /* RAWConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RAWConverter.swift; sourceTree = "<group>"; };
-		A98286301B6249D70049D193 /* Renamer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renamer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A98286171B62498D0049D193 /* Frameworks */ = {
+		A9043D7D1B63784A0081B774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DD81B637A190081B774 /* JGFPhotoMetadata.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043D871B63784A0081B774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043D8B1B63784A0081B774 /* NYCCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043DAF1B6379650081B774 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A9043DB91B6379650081B774 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DBD1B6379650081B774 /* JGFPhotoMetadata.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A98286171B62498D0049D193 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DAD1B6378F90081B774 /* NYCCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A9043D821B63784A0081B774 /* NYCCore */ = {
+			isa = PBXGroup;
+			children = (
+				A9043D981B6378690081B774 /* ImageProcessor.swift */,
+				A9043D991B6378690081B774 /* ImageScanner.swift */,
+				A9043D9E1B6378690081B774 /* Options.swift */,
+				A9043D9F1B6378690081B774 /* RAWConverter.swift */,
+				A9043DA01B6378690081B774 /* Renamer.swift */,
+				A9043D831B63784A0081B774 /* NYCCore.h */,
+				A9043D851B63784A0081B774 /* Info.plist */,
+			);
+			path = NYCCore;
+			sourceTree = "<group>";
+		};
+		A9043D8E1B63784A0081B774 /* NYCCoreTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9043D8F1B63784A0081B774 /* NYCCoreTests.m */,
+				A9043D911B63784A0081B774 /* Info.plist */,
+			);
+			path = NYCCoreTests;
+			sourceTree = "<group>";
+		};
+		A9043DB41B6379650081B774 /* JGFPhotoMetadata */ = {
+			isa = PBXGroup;
+			children = (
+				A9043DD21B6379E70081B774 /* JGFPhotoProperties.h */,
+				A9043DD31B6379E70081B774 /* JGFPhotoProperties.m */,
+				A9043DCA1B63797D0081B774 /* JGFPhotoMetadata.h */,
+				A9043DCC1B63797D0081B774 /* JGFPhotoProperty.h */,
+				A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */,
+				A9043DB71B6379650081B774 /* Info.plist */,
+			);
+			path = JGFPhotoMetadata;
+			sourceTree = "<group>";
+		};
+		A9043DC01B6379650081B774 /* JGFPhotoMetadataTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9043DC11B6379650081B774 /* JGFPhotoMetadataTests.m */,
+				A9043DC31B6379650081B774 /* Info.plist */,
+			);
+			path = JGFPhotoMetadataTests;
+			sourceTree = "<group>";
+		};
 		A98286111B62498D0049D193 = {
 			isa = PBXGroup;
 			children = (
 				A982861C1B62498D0049D193 /* New York City */,
+				A9043D821B63784A0081B774 /* NYCCore */,
+				A9043D8E1B63784A0081B774 /* NYCCoreTests */,
+				A9043DB41B6379650081B774 /* JGFPhotoMetadata */,
+				A9043DC01B6379650081B774 /* JGFPhotoMetadataTests */,
 				A982861B1B62498D0049D193 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +200,10 @@
 			isa = PBXGroup;
 			children = (
 				A982861A1B62498D0049D193 /* nyc */,
+				A9043D811B63784A0081B774 /* NYCCore.framework */,
+				A9043D8A1B63784A0081B774 /* NYCCoreTests.xctest */,
+				A9043DB31B6379650081B774 /* JGFPhotoMetadata.framework */,
+				A9043DBC1B6379650081B774 /* JGFPhotoMetadataTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,24 +211,108 @@
 		A982861C1B62498D0049D193 /* New York City */ = {
 			isa = PBXGroup;
 			children = (
-				A982862B1B6249D70049D193 /* ImageProcessor.swift */,
-				A982862C1B6249D70049D193 /* ImageScanner.swift */,
 				A982862D1B6249D70049D193 /* main.swift */,
-				A982862E1B6249D70049D193 /* Options.swift */,
-				A982862F1B6249D70049D193 /* RAWConverter.swift */,
-				A98286301B6249D70049D193 /* Renamer.swift */,
-				A98286251B6249A70049D193 /* JGFPhotoMetadata.h */,
-				A98286261B6249A70049D193 /* JGFPhotoMetadata.m */,
-				A98286271B6249A70049D193 /* JGFPhotoProperty.h */,
-				A98286281B6249A70049D193 /* JGFPhotoProperty.m */,
-				A98286241B6249A60049D193 /* New York City-Bridging-Header.h */,
 			);
 			path = "New York City";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		A9043D7E1B63784A0081B774 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043D841B63784A0081B774 /* NYCCore.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043DB01B6379650081B774 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DD01B63797D0081B774 /* JGFPhotoProperty.h in Headers */,
+				A9043DCE1B63797D0081B774 /* JGFPhotoMetadata.h in Headers */,
+				A9043DD41B6379E70081B774 /* JGFPhotoProperties.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		A9043D801B63784A0081B774 /* NYCCore */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9043D961B63784A0081B774 /* Build configuration list for PBXNativeTarget "NYCCore" */;
+			buildPhases = (
+				A9043D7C1B63784A0081B774 /* Sources */,
+				A9043D7D1B63784A0081B774 /* Frameworks */,
+				A9043D7E1B63784A0081B774 /* Headers */,
+				A9043D7F1B63784A0081B774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9043DD71B637A130081B774 /* PBXTargetDependency */,
+			);
+			name = NYCCore;
+			productName = NYCCore;
+			productReference = A9043D811B63784A0081B774 /* NYCCore.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A9043D891B63784A0081B774 /* NYCCoreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9043D971B63784A0081B774 /* Build configuration list for PBXNativeTarget "NYCCoreTests" */;
+			buildPhases = (
+				A9043D861B63784A0081B774 /* Sources */,
+				A9043D871B63784A0081B774 /* Frameworks */,
+				A9043D881B63784A0081B774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9043D8D1B63784A0081B774 /* PBXTargetDependency */,
+			);
+			name = NYCCoreTests;
+			productName = NYCCoreTests;
+			productReference = A9043D8A1B63784A0081B774 /* NYCCoreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A9043DB21B6379650081B774 /* JGFPhotoMetadata */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9043DC41B6379650081B774 /* Build configuration list for PBXNativeTarget "JGFPhotoMetadata" */;
+			buildPhases = (
+				A9043DAE1B6379650081B774 /* Sources */,
+				A9043DAF1B6379650081B774 /* Frameworks */,
+				A9043DB01B6379650081B774 /* Headers */,
+				A9043DB11B6379650081B774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JGFPhotoMetadata;
+			productName = JGFPhotoMetadata;
+			productReference = A9043DB31B6379650081B774 /* JGFPhotoMetadata.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A9043DBB1B6379650081B774 /* JGFPhotoMetadataTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9043DC71B6379650081B774 /* Build configuration list for PBXNativeTarget "JGFPhotoMetadataTests" */;
+			buildPhases = (
+				A9043DB81B6379650081B774 /* Sources */,
+				A9043DB91B6379650081B774 /* Frameworks */,
+				A9043DBA1B6379650081B774 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9043DBF1B6379650081B774 /* PBXTargetDependency */,
+			);
+			name = JGFPhotoMetadataTests;
+			productName = JGFPhotoMetadataTests;
+			productReference = A9043DBC1B6379650081B774 /* JGFPhotoMetadataTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A98286191B62498D0049D193 /* New York City */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A98286211B62498D0049D193 /* Build configuration list for PBXNativeTarget "New York City" */;
@@ -103,6 +324,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9043DAC1B6378F30081B774 /* PBXTargetDependency */,
 			);
 			name = "New York City";
 			productName = "New York City";
@@ -119,6 +341,18 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "josh-fuggle";
 				TargetAttributes = {
+					A9043D801B63784A0081B774 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A9043D891B63784A0081B774 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A9043DB21B6379650081B774 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					A9043DBB1B6379650081B774 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 					A98286191B62498D0049D193 = {
 						CreatedOnToolsVersion = 6.4;
 					};
@@ -137,29 +371,252 @@
 			projectRoot = "";
 			targets = (
 				A98286191B62498D0049D193 /* New York City */,
+				A9043D801B63784A0081B774 /* NYCCore */,
+				A9043D891B63784A0081B774 /* NYCCoreTests */,
+				A9043DB21B6379650081B774 /* JGFPhotoMetadata */,
+				A9043DBB1B6379650081B774 /* JGFPhotoMetadataTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		A9043D7F1B63784A0081B774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043D881B63784A0081B774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043DB11B6379650081B774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043DBA1B6379650081B774 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		A9043D7C1B63784A0081B774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DA91B6378690081B774 /* Renamer.swift in Sources */,
+				A9043DA21B6378690081B774 /* ImageScanner.swift in Sources */,
+				A9043DA11B6378690081B774 /* ImageProcessor.swift in Sources */,
+				A9043DA71B6378690081B774 /* Options.swift in Sources */,
+				A9043DA81B6378690081B774 /* RAWConverter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043D861B63784A0081B774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043D901B63784A0081B774 /* NYCCoreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043DAE1B6379650081B774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DD11B63797D0081B774 /* JGFPhotoProperty.m in Sources */,
+				A9043DD51B6379E70081B774 /* JGFPhotoProperties.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9043DB81B6379650081B774 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9043DC21B6379650081B774 /* JGFPhotoMetadataTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A98286161B62498D0049D193 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A982862A1B6249A70049D193 /* JGFPhotoProperty.m in Sources */,
 				A98286331B6249D70049D193 /* main.swift in Sources */,
-				A98286361B6249D70049D193 /* Renamer.swift in Sources */,
-				A98286311B6249D70049D193 /* ImageProcessor.swift in Sources */,
-				A98286321B6249D70049D193 /* ImageScanner.swift in Sources */,
-				A98286341B6249D70049D193 /* Options.swift in Sources */,
-				A98286351B6249D70049D193 /* RAWConverter.swift in Sources */,
-				A98286291B6249A70049D193 /* JGFPhotoMetadata.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A9043D8D1B63784A0081B774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9043D801B63784A0081B774 /* NYCCore */;
+			targetProxy = A9043D8C1B63784A0081B774 /* PBXContainerItemProxy */;
+		};
+		A9043DAC1B6378F30081B774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9043D801B63784A0081B774 /* NYCCore */;
+			targetProxy = A9043DAB1B6378F30081B774 /* PBXContainerItemProxy */;
+		};
+		A9043DBF1B6379650081B774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9043DB21B6379650081B774 /* JGFPhotoMetadata */;
+			targetProxy = A9043DBE1B6379650081B774 /* PBXContainerItemProxy */;
+		};
+		A9043DD71B637A130081B774 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9043DB21B6379650081B774 /* JGFPhotoMetadata */;
+			targetProxy = A9043DD61B637A130081B774 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		A9043D921B63784A0081B774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = NYCCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.NYCCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9043D931B63784A0081B774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = NYCCore/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.NYCCore;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9043D941B63784A0081B774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NYCCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.NYCCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9043D951B63784A0081B774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NYCCoreTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.NYCCoreTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A9043DC51B6379650081B774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = JGFPhotoMetadata/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.JGFPhotoMetadata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A9043DC61B6379650081B774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = JGFPhotoMetadata/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.JGFPhotoMetadata;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A9043DC81B6379650081B774 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = JGFPhotoMetadataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.JGFPhotoMetadataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9043DC91B6379650081B774 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = JGFPhotoMetadataTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.JGFPhotoMetadataTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		A982861F1B62498D0049D193 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -245,7 +702,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = nyc;
-				SWIFT_OBJC_BRIDGING_HEADER = "New York City/New York City-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -256,13 +714,46 @@
 				CLANG_ENABLE_MODULES = YES;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = nyc;
-				SWIFT_OBJC_BRIDGING_HEADER = "New York City/New York City-Bridging-Header.h";
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A9043D961B63784A0081B774 /* Build configuration list for PBXNativeTarget "NYCCore" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9043D921B63784A0081B774 /* Debug */,
+				A9043D931B63784A0081B774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9043D971B63784A0081B774 /* Build configuration list for PBXNativeTarget "NYCCoreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9043D941B63784A0081B774 /* Debug */,
+				A9043D951B63784A0081B774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9043DC41B6379650081B774 /* Build configuration list for PBXNativeTarget "JGFPhotoMetadata" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9043DC51B6379650081B774 /* Debug */,
+				A9043DC61B6379650081B774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9043DC71B6379650081B774 /* Build configuration list for PBXNativeTarget "JGFPhotoMetadataTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9043DC81B6379650081B774 /* Debug */,
+				A9043DC91B6379650081B774 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		A98286151B62498D0049D193 /* Build configuration list for PBXProject "New York City" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

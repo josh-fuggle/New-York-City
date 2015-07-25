@@ -8,17 +8,17 @@
 
 import Foundation
 
-class Options {
+public class Options {
     
-    var dryRun: Bool
+    public var dryRun: Bool
     
-    var shouldRename: Bool
-    var shouldConvertRAWs: Bool
+    public var shouldRename: Bool
+    public var shouldConvertRAWs: Bool
     
-    var albumName: String?
-    var basePath: String?
+    public var albumName: String?
+    public var basePath: String?
     
-    init(arguments: [String]) {
+    public init(arguments: [String]) {
         
         // Helpers
         
@@ -79,7 +79,7 @@ class Options {
         }
     }
     
-    func validate() -> (valid: Bool, suggestions: [String]?) {
+    public func validate() -> (valid: Bool, suggestions: [String]?) {
         
         var errors = [String]()
         

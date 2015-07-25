@@ -7,18 +7,19 @@
 //
 
 import Foundation
+import JGFPhotoMetadata
 
-class Renamer: ImageProcessor {
+public class Renamer: ImageProcessor {
     
     let baseImageName: String
     let fm: NSFileManager
     
-    init(baseImageName: String, fm: NSFileManager) {
+    public init(baseImageName: String, fm: NSFileManager) {
         self.baseImageName = baseImageName
         self.fm = fm
     }
     
-    func processURLs(URLs: [NSURL]?, dryRun: Bool) {
+    public func processURLs(URLs: [NSURL]?, dryRun: Bool) {
         if let URLs = URLs {
             for URL in URLs {
                 processURL(URL: URL, dryRun: dryRun)
@@ -26,7 +27,7 @@ class Renamer: ImageProcessor {
         }
     }
     
-    func processURL(URL from: NSURL, dryRun: Bool) {
+    public func processURL(URL from: NSURL, dryRun: Bool) {
         
         print("🏁 Process image at URL for renaming: \(from)")
         

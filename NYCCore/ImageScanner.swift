@@ -8,18 +8,18 @@
 
 import Foundation
 
-class ImageScanner {
+public class ImageScanner {
     
     let baseURL: NSURL
     let fm: NSFileManager
-    var scannedImageURLs: [NSURL]?
+    public var scannedImageURLs: [NSURL]?
     
-    init (baseURL: NSURL, fm: NSFileManager) {
+    public init (baseURL: NSURL, fm: NSFileManager) {
         self.baseURL = baseURL
         self.fm = fm
     }
     
-    func scan() {
+    public func scan() {
         self.scannedImageURLs = recurseDirectories(self.baseURL, fileManager: self.fm)
     }
     

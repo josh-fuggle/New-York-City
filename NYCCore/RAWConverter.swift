@@ -9,7 +9,7 @@
 import Foundation
 import ImageIO
 
-func CGImageWriteToURL(image: CGImageRef, URL: NSURL, metadata: CGImageMetadataRef) {
+private func CGImageWriteToURL(image: CGImageRef, URL: NSURL, metadata: CGImageMetadataRef) {
     let url = URL as CFURLRef
     if let destination = CGImageDestinationCreateWithURL(url, kUTTypeJPEG, 1, nil) {
         CGImageDestinationAddImageAndMetadata(destination, image, metadata, nil)
@@ -25,17 +25,17 @@ func CGImageWriteToURL(image: CGImageRef, URL: NSURL, metadata: CGImageMetadataR
     }
 }
 
-class RAWConverter: ImageProcessor {
+public class RAWConverter: ImageProcessor {
     
     let supportedRAWFormats: [String]
     let fm: NSFileManager
     
-    init(supportedRAWFormats: [String], fm: NSFileManager) {
+    public init(supportedRAWFormats: [String], fm: NSFileManager) {
         self.supportedRAWFormats = supportedRAWFormats
         self.fm = fm
     }
     
-    func processURLs(URLs: [NSURL]?, dryRun: Bool) {
+    public func processURLs(URLs: [NSURL]?, dryRun: Bool) {
         if let URLs = URLs {
             for URL in URLs {
                 processURL(URL: URL, dryRun: dryRun)
@@ -43,7 +43,7 @@ class RAWConverter: ImageProcessor {
         }
     }
     
-    func processURL(URL from: NSURL, dryRun: Bool) {
+    public func processURL(URL from: NSURL, dryRun: Bool) {
         print("🏁 Process image at URL for conversion: \(from)")
         
         if let source = CGImageSourceCreateWithURL(from, nil),

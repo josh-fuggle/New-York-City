@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ImageProcessor {
+public protocol ImageProcessor {
     func processURLs(URLs: [NSURL]?, dryRun: Bool)
     func processURL(URL from: NSURL, dryRun: Bool)
 }

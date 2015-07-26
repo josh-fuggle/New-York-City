@@ -6,7 +6,51 @@
 //  Copyright (c) 2015 josh-fuggle. All rights reserved.
 //
 
+@import ImageIO;
+
 #import "JGFPhotoProperty.h"
+
+static NSString *ImageIOLocalizedString(NSString* key)
+{
+    static NSBundle* b = nil;
+    
+    if (!b)
+    {
+        b = [NSBundle bundleWithIdentifier:@"com.apple.ImageIO.framework"];
+    }
+    
+    return [b localizedStringForKey:key value:key table:@"CGImageSource"];
+}
+
+extern _Nullable id <JGFPhotoProperty> JGFPhotoPropertyFromDict(NSDictionary * _Nonnull dict, CFStringRef _Nonnull key, JGFPhotoPropertyType type)
+{
+    NSString *castedKey = (__bridge NSString *)key;
+    NSString *locKey = ImageIOLocalizedString(castedKey);
+    id obj = [dict objectForKey:castedKey];
+    
+    id <JGFPhotoProperty> property;
+    
+    switch (type)
+    {
+        case JGFPhotoPropertyTypeBool:
+            property = [JGFPhotoBoolProperty alloc];
+            break;
+            
+        case JGFPhotoPropertyTypeInteger:
+            property = [JGFPhotoIntegerProperty alloc];
+            break;
+            
+        case JGFPhotoPropertyTypeFloat:
+            property = [JGFPhotoFloatProperty alloc];
+            break;
+            
+        case JGFPhotoPropertyTypeString:
+            property = [JGFPhotoStringProperty alloc];
+            break;
+    }
+    
+    return [property initWithName:locKey value:obj];
+}
 
 @implementation JGFPhotoBoolProperty
 

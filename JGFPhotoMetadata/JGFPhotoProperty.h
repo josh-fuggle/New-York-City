@@ -21,6 +21,8 @@ typedef NS_ENUM(NSInteger, JGFPhotoPropertyType)
 @property (nonnull, nonatomic, strong) NSString *name;
 @end
 
+extern _Nullable id <JGFPhotoProperty> JGFPhotoPropertyFromDict(NSDictionary * _Nonnull dict, CFStringRef _Nonnull key, JGFPhotoPropertyType type);
+
 @interface JGFPhotoIntegerProperty : NSObject <JGFPhotoProperty>
 @property (nonatomic, assign) NSInteger value;
 @end

@@ -7,48 +7,7 @@
 //
 
 #import "JGFPhotoProperties.h"
-
-static NSString *ImageIOLocalizedString(NSString* key)
-{
-    static NSBundle* b = nil;
-    
-    if (!b)
-    {
-        b = [NSBundle bundleWithIdentifier:@"com.apple.ImageIO.framework"];
-    }
-    
-    return [b localizedStringForKey:key value:key table:@"CGImageSource"];
-}
-
-static inline id <JGFPhotoProperty> JGFPhotoPropertyFromDict(NSDictionary *dict, CFStringRef key, JGFPhotoPropertyType type)
-{
-    NSString *castedKey = (__bridge NSString *)key;
-    NSString *locKey = ImageIOLocalizedString(castedKey);
-    id obj = [dict objectForKey:castedKey];
-    
-    id <JGFPhotoProperty> property;
-    
-    switch (type)
-    {
-        case JGFPhotoPropertyTypeBool:
-            property = [JGFPhotoBoolProperty alloc];
-            break;
-            
-        case JGFPhotoPropertyTypeInteger:
-            property = [JGFPhotoIntegerProperty alloc];
-            break;
-            
-        case JGFPhotoPropertyTypeFloat:
-            property = [JGFPhotoFloatProperty alloc];
-            break;
-            
-        case JGFPhotoPropertyTypeString:
-            property = [JGFPhotoStringProperty alloc];
-            break;
-    }
-    
-    return [property initWithName:locKey value:obj];
-}
+#import "JGFGPSPhotoProperties.h"
 
 @implementation JGFPhotoProperties
 
@@ -151,6 +110,11 @@ static inline id <JGFPhotoProperty> JGFPhotoPropertyFromDict(NSDictionary *dict,
     return [self loadEXIFDataWithKey:kCGImagePropertyExifDictionary];
 }
 
+- (JGFGPSPhotoProperties * _Nullable)GPSData
+{
+    return [self loadGPSDataWithKey:kCGImagePropertyGPSDictionary];
+}
+
 #pragma mark - Private
 
 - (JGFExifPhotoProperties * __nullable)loadEXIFDataWithKey:(CFStringRef)key
@@ -174,6 +138,19 @@ static inline id <JGFPhotoProperty> JGFPhotoPropertyFromDict(NSDictionary *dict,
     if ([obj isKindOfClass:[NSDictionary class]])
     {
         return [[JGFTIFFPhotoProperties alloc] initWithDictionary:obj];
+    }
+    
+    return nil;
+}
+
+- (JGFGPSPhotoProperties * __nullable)loadGPSDataWithKey:(CFStringRef)key
+{
+    NSString *castedKey = (__bridge NSString *)key;
+    id obj = [self.rawData objectForKey:castedKey];
+    
+    if ([obj isKindOfClass:[NSDictionary class]])
+    {
+        return [[JGFGPSPhotoProperties alloc] initWithDictionary:obj];
     }
     
     return nil;

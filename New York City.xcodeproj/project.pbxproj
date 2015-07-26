@@ -24,6 +24,10 @@
 		A9043DD41B6379E70081B774 /* JGFPhotoProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = A9043DD21B6379E70081B774 /* JGFPhotoProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A9043DD51B6379E70081B774 /* JGFPhotoProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043DD31B6379E70081B774 /* JGFPhotoProperties.m */; };
 		A9043DD81B637A190081B774 /* JGFPhotoMetadata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9043DB31B6379650081B774 /* JGFPhotoMetadata.framework */; };
+		A9043DDB1B637D970081B774 /* JGFGPSPhotoProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = A9043DD91B637D970081B774 /* JGFGPSPhotoProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9043DDC1B637D970081B774 /* JGFGPSPhotoProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043DDA1B637D970081B774 /* JGFGPSPhotoProperties.m */; };
+		A9043DE21B6385630081B774 /* JGFTGPSPhotoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043DE11B6385630081B774 /* JGFTGPSPhotoProperties.swift */; };
+		A9043DE41B638A9E0081B774 /* sallykins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9043DE31B638A9E0081B774 /* sallykins.jpg */; };
 		A98286331B6249D70049D193 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862D1B6249D70049D193 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +96,11 @@
 		A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperty.m; sourceTree = "<group>"; };
 		A9043DD21B6379E70081B774 /* JGFPhotoProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFPhotoProperties.h; sourceTree = "<group>"; };
 		A9043DD31B6379E70081B774 /* JGFPhotoProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFPhotoProperties.m; sourceTree = "<group>"; };
+		A9043DD91B637D970081B774 /* JGFGPSPhotoProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGFGPSPhotoProperties.h; sourceTree = "<group>"; };
+		A9043DDA1B637D970081B774 /* JGFGPSPhotoProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGFGPSPhotoProperties.m; sourceTree = "<group>"; };
+		A9043DE01B6385630081B774 /* JGFPhotoMetadataTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JGFPhotoMetadataTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		A9043DE11B6385630081B774 /* JGFTGPSPhotoProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGFTGPSPhotoProperties.swift; sourceTree = "<group>"; };
+		A9043DE31B638A9E0081B774 /* sallykins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sallykins.jpg; sourceTree = "<group>"; };
 		A982861A1B62498D0049D193 /* nyc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nyc; sourceTree = BUILT_PRODUCTS_DIR; };
 		A982862D1B6249D70049D193 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +180,8 @@
 				A9043DCC1B63797D0081B774 /* JGFPhotoProperty.h */,
 				A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */,
 				A9043DB71B6379650081B774 /* Info.plist */,
+				A9043DD91B637D970081B774 /* JGFGPSPhotoProperties.h */,
+				A9043DDA1B637D970081B774 /* JGFGPSPhotoProperties.m */,
 			);
 			path = JGFPhotoMetadata;
 			sourceTree = "<group>";
@@ -178,10 +189,21 @@
 		A9043DC01B6379650081B774 /* JGFPhotoMetadataTests */ = {
 			isa = PBXGroup;
 			children = (
+				A9043DDD1B6385090081B774 /* Supporting */,
 				A9043DC11B6379650081B774 /* JGFPhotoMetadataTests.m */,
 				A9043DC31B6379650081B774 /* Info.plist */,
+				A9043DE11B6385630081B774 /* JGFTGPSPhotoProperties.swift */,
+				A9043DE01B6385630081B774 /* JGFPhotoMetadataTests-Bridging-Header.h */,
 			);
 			path = JGFPhotoMetadataTests;
+			sourceTree = "<group>";
+		};
+		A9043DDD1B6385090081B774 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A9043DE31B638A9E0081B774 /* sallykins.jpg */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 		A98286111B62498D0049D193 = {
@@ -233,6 +255,7 @@
 			files = (
 				A9043DD01B63797D0081B774 /* JGFPhotoProperty.h in Headers */,
 				A9043DCE1B63797D0081B774 /* JGFPhotoMetadata.h in Headers */,
+				A9043DDB1B637D970081B774 /* JGFGPSPhotoProperties.h in Headers */,
 				A9043DD41B6379E70081B774 /* JGFPhotoProperties.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -405,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9043DE41B638A9E0081B774 /* sallykins.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9043DD11B63797D0081B774 /* JGFPhotoProperty.m in Sources */,
+				A9043DDC1B637D970081B774 /* JGFGPSPhotoProperties.m in Sources */,
 				A9043DD51B6379E70081B774 /* JGFPhotoProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,6 +470,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9043DC21B6379650081B774 /* JGFPhotoMetadataTests.m in Sources */,
+				A9043DE21B6385630081B774 /* JGFTGPSPhotoProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,22 +624,27 @@
 		A9043DC81B6379650081B774 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = JGFPhotoMetadataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.JGFPhotoMetadataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JGFPhotoMetadataTests/JGFPhotoMetadataTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		A9043DC91B6379650081B774 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = JGFPhotoMetadataTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = coffee.josh.JGFPhotoMetadataTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JGFPhotoMetadataTests/JGFPhotoMetadataTests-Bridging-Header.h";
 			};
 			name = Release;
 		};

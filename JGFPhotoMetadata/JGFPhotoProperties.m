@@ -40,72 +40,72 @@
 
 #pragma mark - Data
 
-- (JGFPhotoIntegerProperty * __nullable)fileSize
+- (JGFPhotoIntegerProperty * _Nullable)fileSize
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyFileSize, JGFPhotoPropertyTypeInteger);
 }
 
-- (JGFPhotoFloatProperty * __nullable)pixelWidth
+- (JGFPhotoFloatProperty * _Nullable)pixelWidth
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyDPIWidth, JGFPhotoPropertyTypeFloat);
 }
 
-- (JGFPhotoFloatProperty * __nullable)pixelHeight
+- (JGFPhotoFloatProperty * _Nullable)pixelHeight
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyPixelHeight, JGFPhotoPropertyTypeFloat);
 }
 
-- (JGFPhotoIntegerProperty * __nullable)depth
+- (JGFPhotoIntegerProperty * _Nullable)depth
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyDepth, JGFPhotoPropertyTypeInteger);
 }
 
-- (JGFPhotoIntegerProperty * __nullable)DPIWidth
+- (JGFPhotoIntegerProperty * _Nullable)DPIWidth
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyDPIWidth, JGFPhotoPropertyTypeInteger);
 }
 
-- (JGFPhotoIntegerProperty * __nullable)DPIHeight
+- (JGFPhotoIntegerProperty * _Nullable)DPIHeight
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyDPIHeight, JGFPhotoPropertyTypeInteger);
 }
 
-- (JGFPhotoIntegerProperty * __nullable)orientation
+- (JGFPhotoIntegerProperty * _Nullable)orientation
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyOrientation, JGFPhotoPropertyTypeInteger);
 }
 
-- (JGFPhotoBoolProperty * __nullable)isFloat
+- (JGFPhotoBoolProperty * _Nullable)isFloat
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyIsFloat, JGFPhotoPropertyTypeBool);
 }
 
-- (JGFPhotoBoolProperty * __nullable)isIndexed
+- (JGFPhotoBoolProperty * _Nullable)isIndexed
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyIsIndexed, JGFPhotoPropertyTypeBool);
 }
 
-- (JGFPhotoBoolProperty * __nullable)hasAlpha
+- (JGFPhotoBoolProperty * _Nullable)hasAlpha
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyHasAlpha, JGFPhotoPropertyTypeBool);
 }
 
-- (JGFPhotoStringProperty * __nullable)colorModel
+- (JGFPhotoStringProperty * _Nullable)colorModel
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyColorModel, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)profileName
+- (JGFPhotoStringProperty * _Nullable)profileName
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyProfileName, JGFPhotoPropertyTypeString);
 }
 
-- (JGFTIFFPhotoProperties * __nullable)TIFFData
+- (JGFTIFFPhotoProperties * _Nullable)TIFFData
 {
     return [self loadTIFFDataWithKey:kCGImagePropertyTIFFDictionary];
 }
 
-- (JGFExifPhotoProperties * __nullable)ExifData
+- (JGFExifPhotoProperties * _Nullable)ExifData
 {
     return [self loadEXIFDataWithKey:kCGImagePropertyExifDictionary];
 }
@@ -117,7 +117,7 @@
 
 #pragma mark - Private
 
-- (JGFExifPhotoProperties * __nullable)loadEXIFDataWithKey:(CFStringRef)key
+- (JGFExifPhotoProperties * _Nullable)loadEXIFDataWithKey:(CFStringRef)key
 {
     NSString *castedKey = (__bridge NSString *)key;
     id obj = [self.rawData objectForKey:castedKey];
@@ -130,7 +130,7 @@
     return nil;
 }
 
-- (JGFTIFFPhotoProperties * __nullable)loadTIFFDataWithKey:(CFStringRef)key
+- (JGFTIFFPhotoProperties * _Nullable)loadTIFFDataWithKey:(CFStringRef)key
 {
     NSString *castedKey = (__bridge NSString *)key;
     id obj = [self.rawData objectForKey:castedKey];
@@ -143,7 +143,7 @@
     return nil;
 }
 
-- (JGFGPSPhotoProperties * __nullable)loadGPSDataWithKey:(CFStringRef)key
+- (JGFGPSPhotoProperties * _Nullable)loadGPSDataWithKey:(CFStringRef)key
 {
     NSString *castedKey = (__bridge NSString *)key;
     id obj = [self.rawData objectForKey:castedKey];
@@ -173,47 +173,47 @@
 
 #pragma mark - Data
 
-- (JGFPhotoStringProperty * __nullable)imageDescription
+- (JGFPhotoStringProperty * _Nullable)imageDescription
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFImageDescription, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)documentName
+- (JGFPhotoStringProperty * _Nullable)documentName
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFDocumentName, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)make
+- (JGFPhotoStringProperty * _Nullable)make
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFMake, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)model
+- (JGFPhotoStringProperty * _Nullable)model
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFModel, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)software
+- (JGFPhotoStringProperty * _Nullable)software
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFSoftware, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)dateTime
+- (JGFPhotoStringProperty * _Nullable)dateTime
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFDateTime, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)artist
+- (JGFPhotoStringProperty * _Nullable)artist
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFArtist, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)hostComputer
+- (JGFPhotoStringProperty * _Nullable)hostComputer
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFHostComputer, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)copyright
+- (JGFPhotoStringProperty * _Nullable)copyright
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyTIFFCopyright, JGFPhotoPropertyTypeString);
 }
@@ -235,14 +235,129 @@
 
 #pragma mark - Data
 
-- (JGFPhotoStringProperty * __nullable)dateTimeOriginal
+- (JGFPhotoFloatProperty * _Nullable)exposureTime
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifExposureTime, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)FNumber
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifFNumber, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)ISOSpeed
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifISOSpeed, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoStringProperty * _Nullable)dateTimeOriginal
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifDateTimeOriginal, JGFPhotoPropertyTypeString);
 }
 
-- (JGFPhotoStringProperty * __nullable)dateTimeDigitized
+- (JGFPhotoStringProperty * _Nullable)dateTimeDigitized
 {
     return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifDateTimeDigitized, JGFPhotoPropertyTypeString);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)shutterSpeedValue
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifShutterSpeedValue, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)apertureValue
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifApertureValue, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)brightnessValue
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifBrightnessValue, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)subjectDistance
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifSubjectDistance, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoBoolProperty * _Nullable)flash
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifFlash, JGFPhotoPropertyTypeBool);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)focalLength
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifFocalLength, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)subjectArea
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifSubjectArea, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoIntegerProperty * _Nullable)pixelXDimension
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifPixelXDimension, JGFPhotoPropertyTypeInteger);
+}
+
+- (JGFPhotoIntegerProperty * _Nullable)pixelYDimension
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifPixelYDimension, JGFPhotoPropertyTypeInteger);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)subjectLocation
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifSubjectLocation, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoStringProperty * _Nullable)exposureMode
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifExposureMode, JGFPhotoPropertyTypeString);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)whiteBalance
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifWhiteBalance, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)contrast
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifContrast, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)saturation
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifSaturation, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)sharpness
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifSharpness, JGFPhotoPropertyTypeFloat);
+}
+
+- (JGFPhotoStringProperty * _Nullable)imageUniqueID
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifImageUniqueID, JGFPhotoPropertyTypeString);
+}
+
+- (JGFPhotoStringProperty * _Nullable)lensSpecification
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifLensSpecification, JGFPhotoPropertyTypeString);
+}
+
+- (JGFPhotoStringProperty * _Nullable)lensMake
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifLensMake, JGFPhotoPropertyTypeString);
+}
+
+- (JGFPhotoStringProperty * _Nullable)lensModel
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifLensModel, JGFPhotoPropertyTypeString);
+}
+
+- (JGFPhotoFloatProperty * _Nullable)gamma
+{
+    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyExifGamma, JGFPhotoPropertyTypeFloat);
 }
 
 @end

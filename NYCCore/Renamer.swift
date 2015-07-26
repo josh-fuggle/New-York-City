@@ -67,7 +67,7 @@ public class Renamer: ImageProcessor {
         let nameComponents = NSMutableArray()
         nameComponents.addObject(baseImageName)
         
-        if let properties = JGFPhotoProperties.propertyTreeWithURL(URL) {
+        if let properties = JGFPhotoInformation.propertyTreeWithURL(URL) {
         
             if let Exif = properties.ExifData, dateTime = Exif.dateTimeOriginal {
                 nameComponents.addObject(formatSystemDate(dateTime.value))

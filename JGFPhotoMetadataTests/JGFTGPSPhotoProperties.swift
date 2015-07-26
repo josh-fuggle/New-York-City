@@ -11,15 +11,15 @@ import JGFPhotoMetadata
 
 class JGFTGPSPhotoProperties: XCTestCase {
     
-    var properties: JGFPhotoProperties?
+    var information: JGFPhotoInformation?
 
     override func setUp() {
         super.setUp()
         
         let imageURL = NSBundle(forClass: self.classForCoder).URLForResource("sallykins", withExtension: "jpg")
         
-        if let photoProperties = JGFPhotoProperties.propertyTreeWithURL(imageURL) {
-            self.properties = photoProperties
+        if let information = JGFPhotoInformation(URL: imageURL) {
+            self.information = information
         } else {
             XCTFail()
         }
@@ -27,7 +27,7 @@ class JGFTGPSPhotoProperties: XCTestCase {
     
     func testThatItCorrectlyReturnsProperties() {
         
-        if let props = self.properties, GPSData = props.GPSData {
+        if let info = self.information, GPSData = info.GPSData {
             
             let latitude = GPSData.latitude!
             XCTAssertNotNil(latitude)

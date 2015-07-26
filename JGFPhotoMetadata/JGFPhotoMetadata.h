@@ -14,7 +14,5 @@ FOUNDATION_EXPORT double JGFPhotoMetadataVersionNumber;
 //! Project version string for JGFPhotoMetadata.
 FOUNDATION_EXPORT const unsigned char JGFPhotoMetadataVersionString[];
 
-#import "JGFPhotoProperty.h"
-#import "JGFPhotoProperties.h"
-#import "JGFGPSPhotoProperties.h"
+#import "JGFPhotoInformation.h"
 

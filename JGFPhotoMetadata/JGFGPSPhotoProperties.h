@@ -8,9 +8,10 @@
 
 @import Foundation;
 
-#import "JGFPhotoProperties.h"
+#import "JGFPhotoProperty.h"
+#import "JGFPhotoPropertySet.h"
 
-@interface JGFGPSPhotoProperties : NSObject <JGFPhotoPropertyTree>
+@interface JGFGPSPhotoProperties : NSObject <JGFPhotoPropertySet>
 
 @property (nullable, atomic, readonly) JGFPhotoStringProperty *version;
 @property (nullable, atomic, readonly) JGFPhotoFloatProperty *latitude;

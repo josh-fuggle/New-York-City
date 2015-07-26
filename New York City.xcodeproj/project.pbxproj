@@ -28,6 +28,7 @@
 		A9043DDC1B637D970081B774 /* JGFGPSPhotoProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = A9043DDA1B637D970081B774 /* JGFGPSPhotoProperties.m */; };
 		A9043DE21B6385630081B774 /* JGFTGPSPhotoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043DE11B6385630081B774 /* JGFTGPSPhotoProperties.swift */; };
 		A9043DE41B638A9E0081B774 /* sallykins.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A9043DE31B638A9E0081B774 /* sallykins.jpg */; };
+		A9043DE61B646B9B0081B774 /* Geocoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9043DE51B646B9B0081B774 /* Geocoder.swift */; };
 		A98286331B6249D70049D193 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A982862D1B6249D70049D193 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		A9043DE01B6385630081B774 /* JGFPhotoMetadataTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JGFPhotoMetadataTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A9043DE11B6385630081B774 /* JGFTGPSPhotoProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JGFTGPSPhotoProperties.swift; sourceTree = "<group>"; };
 		A9043DE31B638A9E0081B774 /* sallykins.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sallykins.jpg; sourceTree = "<group>"; };
+		A9043DE51B646B9B0081B774 /* Geocoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Geocoder.swift; sourceTree = "<group>"; };
 		A982861A1B62498D0049D193 /* nyc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = nyc; sourceTree = BUILT_PRODUCTS_DIR; };
 		A982862D1B6249D70049D193 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +160,7 @@
 				A9043DA01B6378690081B774 /* Renamer.swift */,
 				A9043D831B63784A0081B774 /* NYCCore.h */,
 				A9043D851B63784A0081B774 /* Info.plist */,
+				A9043DE51B646B9B0081B774 /* Geocoder.swift */,
 			);
 			path = NYCCore;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9043DA91B6378690081B774 /* Renamer.swift in Sources */,
+				A9043DE61B646B9B0081B774 /* Geocoder.swift in Sources */,
 				A9043DA21B6378690081B774 /* ImageScanner.swift in Sources */,
 				A9043DA11B6378690081B774 /* ImageProcessor.swift in Sources */,
 				A9043DA71B6378690081B774 /* Options.swift in Sources */,

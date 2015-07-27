@@ -10,12 +10,13 @@
 
 #import "JGFPhotoProperty.h"
 #import "JGFPhotoPropertySet.h"
+#import "JGFPresentablePhotoInformation.h"
 
 #import "JGFGPSPhotoProperties.h"
 #import "JGFExifPhotoProperties.h"
 #import "JGFTIFFPhotoProperties.h"
 
-@interface JGFPhotoInformation : NSObject <JGFPhotoPropertySet>
+@interface JGFPhotoInformation : NSObject <JGFPhotoPropertySet, JGFPresentablePhotoInformation>
 
 + (nullable instancetype)photoInformationWithURL:(nullable NSURL *)URL;
 + (nullable instancetype)photoInformationWithImageSource:(nullable CGImageSourceRef)source;

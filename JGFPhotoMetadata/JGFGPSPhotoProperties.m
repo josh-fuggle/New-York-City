@@ -12,7 +12,7 @@
 
 @implementation JGFGPSPhotoProperties
 
-#pragma mark - Init
+#pragma mark - JGFPhotoPropertySet
 
 @synthesize rawData = _rawData;
 
@@ -25,12 +25,31 @@
     return self;
 }
 
-#pragma mark - Data
+#pragma mark - JGFPresentablePhotoInformation
 
-- (JGFPhotoStringProperty * _Nullable)version
+- (NSString *)localizedTitle
 {
-    return JGFPhotoPropertyFromDict(self.rawData, kCGImagePropertyGPSVersion, JGFPhotoPropertyTypeString);
+    return NSLocalizedString(@"GPS", @"GPS photo information.");
 }
+
+- (NSArray *)presentablePhotoInformation
+{
+    NSMutableArray *presentable = [NSMutableArray new];
+    
+    [presentable addObject:[self latitude]];
+    [presentable addObject:[self longitude]];
+    [presentable addObject:[self altitude]];
+    [presentable addObject:[self timeStamp]];
+    [presentable addObject:[self satellites]];
+    [presentable addObject:[self status]];
+    [presentable addObject:[self areaInformation]];
+    [presentable addObject:[self dateStamp]];
+    [presentable addObject:[self DOP]];
+    
+    return [presentable copy];
+}
+
+#pragma mark - Data
 
 - (JGFPhotoFloatProperty * _Nullable)latitude
 {

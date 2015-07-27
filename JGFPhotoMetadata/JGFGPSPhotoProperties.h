@@ -10,10 +10,10 @@
 
 #import "JGFPhotoProperty.h"
 #import "JGFPhotoPropertySet.h"
+#import "JGFPresentablePhotoInformation.h"
 
-@interface JGFGPSPhotoProperties : NSObject <JGFPhotoPropertySet>
+@interface JGFGPSPhotoProperties : NSObject <JGFPhotoPropertySet, JGFPresentablePhotoInformation>
 
-@property (nullable, atomic, readonly) JGFPhotoStringProperty *version;
 @property (nullable, atomic, readonly) JGFPhotoFloatProperty *latitude;
 @property (nullable, atomic, readonly) JGFPhotoFloatProperty *longitude;
 @property (nullable, atomic, readonly) JGFPhotoFloatProperty *altitude;
@@ -24,6 +24,7 @@
 @property (nullable, atomic, readonly) JGFPhotoStringProperty *dateStamp;
 @property (nullable, atomic, readonly) JGFPhotoFloatProperty *DOP; // precision
 
+//@property (nullable, atomic, readonly) JGFPhotoStringProperty *version;
 //@property (nullable, atomic, readonly) JGFPhotoBoolProperty *latitudeRef;
 //@property (nullable, atomic, readonly) JGFPhotoBoolProperty *longitudeRef;
 //@property (nullable, atomic, readonly) JGFPhotoBoolProperty *altitudeRef;

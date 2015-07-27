@@ -26,6 +26,8 @@
     return nil;
 }
 
+#pragma mark - JGFPhotoPropertySet
+
 @synthesize rawData = _rawData;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary
@@ -35,6 +37,33 @@
         self.rawData = dictionary;
     }
     return self;
+}
+
+#pragma mark - JGFPresentablePhotoInformation
+
+- (NSString *)localizedTitle
+{
+    return NSLocalizedString(@"Metadata", @"Information about about a photo.");
+}
+
+- (NSArray *)presentablePhotoInformation
+{
+    NSMutableArray *presentable = [NSMutableArray new];
+    
+    [presentable addObject:[self fileSize]];
+    [presentable addObject:[self pixelHeight]];
+    [presentable addObject:[self pixelWidth]];
+    [presentable addObject:[self depth]];
+    [presentable addObject:[self DPIHeight]];
+    [presentable addObject:[self DPIWidth]];
+    [presentable addObject:[self orientation]];
+    [presentable addObject:[self isFloat]];
+    [presentable addObject:[self isIndexed]];
+    [presentable addObject:[self hasAlpha]];
+    [presentable addObject:[self colorModel]];
+    [presentable addObject:[self profileName]];
+    
+    return [presentable copy];
 }
 
 #pragma mark - Data

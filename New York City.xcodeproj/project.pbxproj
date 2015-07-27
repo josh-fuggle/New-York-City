@@ -189,20 +189,10 @@
 		A9043DB41B6379650081B774 /* JGFPhotoMetadata */ = {
 			isa = PBXGroup;
 			children = (
-				A9043DD21B6379E70081B774 /* JGFPhotoInformation.h */,
-				A9043DD31B6379E70081B774 /* JGFPhotoInformation.m */,
+				A98952171B6631B600FB4954 /* Protocols */,
+				A98952161B66319D00FB4954 /* Classes */,
 				A9043DCA1B63797D0081B774 /* JGFPhotoMetadata.h */,
-				A9043DCC1B63797D0081B774 /* JGFPhotoProperty.h */,
-				A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */,
 				A9043DB71B6379650081B774 /* Info.plist */,
-				A9043DD91B637D970081B774 /* JGFGPSPhotoProperties.h */,
-				A9043DDA1B637D970081B774 /* JGFGPSPhotoProperties.m */,
-				A9043DE91B64D4E90081B774 /* JGFExifPhotoProperties.h */,
-				A9043DEA1B64D4E90081B774 /* JGFExifPhotoProperties.m */,
-				A9043DED1B64D5A70081B774 /* JGFPhotoPropertySet.h */,
-				A9043DEF1B64D63C0081B774 /* JGFTIFFPhotoProperties.h */,
-				A9043DF01B64D63C0081B774 /* JGFTIFFPhotoProperties.m */,
-				A9043DF31B64DA030081B774 /* JGFPresentablePhotoInformation.h */,
 			);
 			path = JGFPhotoMetadata;
 			sourceTree = "<group>";
@@ -232,8 +222,8 @@
 			children = (
 				A982861C1B62498D0049D193 /* New York City */,
 				A9043D821B63784A0081B774 /* NYCCore */,
-				A9043D8E1B63784A0081B774 /* NYCCoreTests */,
 				A9043DB41B6379650081B774 /* JGFPhotoMetadata */,
+				A9043D8E1B63784A0081B774 /* NYCCoreTests */,
 				A9043DC01B6379650081B774 /* JGFPhotoMetadataTests */,
 				A982861B1B62498D0049D193 /* Products */,
 			);
@@ -257,6 +247,32 @@
 				A982862D1B6249D70049D193 /* main.swift */,
 			);
 			path = "New York City";
+			sourceTree = "<group>";
+		};
+		A98952161B66319D00FB4954 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9043DCC1B63797D0081B774 /* JGFPhotoProperty.h */,
+				A9043DCD1B63797D0081B774 /* JGFPhotoProperty.m */,
+				A9043DD21B6379E70081B774 /* JGFPhotoInformation.h */,
+				A9043DD31B6379E70081B774 /* JGFPhotoInformation.m */,
+				A9043DD91B637D970081B774 /* JGFGPSPhotoProperties.h */,
+				A9043DDA1B637D970081B774 /* JGFGPSPhotoProperties.m */,
+				A9043DE91B64D4E90081B774 /* JGFExifPhotoProperties.h */,
+				A9043DEA1B64D4E90081B774 /* JGFExifPhotoProperties.m */,
+				A9043DEF1B64D63C0081B774 /* JGFTIFFPhotoProperties.h */,
+				A9043DF01B64D63C0081B774 /* JGFTIFFPhotoProperties.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		A98952171B6631B600FB4954 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A9043DED1B64D5A70081B774 /* JGFPhotoPropertySet.h */,
+				A9043DF31B64DA030081B774 /* JGFPresentablePhotoInformation.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,8 +436,8 @@
 			targets = (
 				A98286191B62498D0049D193 /* New York City */,
 				A9043D801B63784A0081B774 /* NYCCore */,
-				A9043D891B63784A0081B774 /* NYCCoreTests */,
 				A9043DB21B6379650081B774 /* JGFPhotoMetadata */,
+				A9043D891B63784A0081B774 /* NYCCoreTests */,
 				A9043DBB1B6379650081B774 /* JGFPhotoMetadataTests */,
 			);
 		};
@@ -788,6 +804,7 @@
 				A9043D931B63784A0081B774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9043D971B63784A0081B774 /* Build configuration list for PBXNativeTarget "NYCCoreTests" */ = {
 			isa = XCConfigurationList;
@@ -796,6 +813,7 @@
 				A9043D951B63784A0081B774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9043DC41B6379650081B774 /* Build configuration list for PBXNativeTarget "JGFPhotoMetadata" */ = {
 			isa = XCConfigurationList;
@@ -804,6 +822,7 @@
 				A9043DC61B6379650081B774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A9043DC71B6379650081B774 /* Build configuration list for PBXNativeTarget "JGFPhotoMetadataTests" */ = {
 			isa = XCConfigurationList;
@@ -812,6 +831,7 @@
 				A9043DC91B6379650081B774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A98286151B62498D0049D193 /* Build configuration list for PBXProject "New York City" */ = {
 			isa = XCConfigurationList;
